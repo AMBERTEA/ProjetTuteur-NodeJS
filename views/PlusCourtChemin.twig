@@ -1,0 +1,29 @@
+    {% include 'NavBar.twig' %}
+
+    <p id="PlacePSeudo"> Votre pseudo est : {{ utilisateur.nom}} </p>
+    <label for="test">Test temps</label><input id="test" value="" type="text">
+
+    <canvas id="myCanvas"></canvas>
+    <script>
+        {% include '../public/assets/js/Graph.class.js' %}
+        {% include '../public/assets/js/GraphADixNoeud.js' %}
+        {% include '../public/assets/js/Dijkstra.js' %}
+        {% include '../public/assets/js/DrawGraph.js' %}
+        {% include '../public/assets/js/JeuDuPlusCourtChemin.js' %}
+    </script>
+
+    <script>
+        let source, target;
+        do {
+            source = Math.floor(Math.random() * graph.getOrder());
+            target = Math.floor(Math.random() * graph.getOrder());
+        } while (source === target);
+
+        saveGameInProgress(graph,source,target,playerPath);
+
+        drawSaveGameInProgress(graph,source,target);
+    </script>
+    <button onclick="valider(playerPath, source, target)">Valider</button>
+    <!--<button onclick="">effacer</button>-->
+</body>
+</html>

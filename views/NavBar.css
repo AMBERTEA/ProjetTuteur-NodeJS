@@ -1,0 +1,102 @@
+/*All*/
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Gill Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    transform-origin: 0 0;
+    transform: scaleX(0);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: .4em;
+    background: #78ab4e;
+    z-index: -1;
+    opacity: 0.8;
+    transition: transform .3s;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.fdsPicture {
+    width: 204px;
+    height: 72px;
+}
+
+/*NavBar*/
+.navBar {
+    width: 80%;
+    padding: 30px 10%;
+    background-color: #FFFFFF;
+    border-bottom: solid 2px #f7eb9f;
+    display: flex;
+}
+
+.navBar div {
+    width: 50%;
+    text-align: center;
+}
+
+.navBar .buttonMenu label {
+    height: 100%;
+    display: inline-block;
+}
+
+.buttonMenuPicture {
+    position: relative;
+    z-index: 112;
+    width: 30px;
+    height: 100%;
+}
+
+/*Check*/
+#check {
+    display: none;
+}
+
+#check:checked ~ .sidebar {
+    left: 0;
+}
+
+/*SideBar*/
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 220px;
+    padding: 30px 40px;
+    height: 100%;
+    background-color: #14a5de;
+    transition: all 0.5s ease;
+}
+
+.sidebar h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.sidebar ul {
+    padding: 0;
+    margin: 10px 0;
+}
+
+.sidebar ul a:hover::after {
+    transform: scaleX(1);
+}
+
+.fdsPictureSidebar {
+    width: 204px;
+    height: 72px;
+}

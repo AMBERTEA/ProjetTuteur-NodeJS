@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Fête de la science !</title>
+    <script src="https://kit.fontawesome.com/50a4c439a4.js" crossorigin="anonymous"></script>
+    <style>
+        {% include 'NavBar.css' %}
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="check">
+
+    <div class="navBar">
+        <div class="buttonMenu">
+            <label for="check">
+                <img class="buttonMenuPicture" id="open" src="/assets/pictures/openMenu.svg" alt="Menu !">
+            </label>
+        </div>
+
+        <div class="titleNavBar">
+            <a href="https://www.fetedelascience.fr/"><img class="fdsPicture" src="/assets/pictures/fds.png" alt="Vive la fête !"></a>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <h3>Menu</h3>
+
+        <ul>
+            <li><a href="/"><i class="fas fa-home"></i>Accueil</a></li>
+            <li><a href="/PlusCourtChemin"><i class="fas fa-flag"></i>Plus court chemin</a></li>
+            <li><a href="/Classement"><i class="fas fa-table"></i>Classement</a></li>
+        </ul>
+
+        <a href="https://www.fetedelascience.fr/"><img class="fdsPictureSidebar" src="/assets/pictures/fds.png" alt="Vive la fête !"></a>
+    </div>
