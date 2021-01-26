@@ -22,7 +22,7 @@ app.get('/',((req, res) => {
 }))
 
 app.get('/PlusCourtChemin',((req, res) => {
-    res.render('PlusCourtChemin.twig',{})
+    res.redirect('/login')
 }))
 
 app.get('/login',(req, res) => {
@@ -32,7 +32,7 @@ app.get('/login',(req, res) => {
 app.get('/rank', (req, res) => {
     connection.query("SELECT * from JOUEUR", (err, list) => {
         if (!err) {
-            res.render('rank.twig', {joueurs: list})
+            res.render('PlusCourtChemin.twig', {joueurs: list})
         } else {
             res.send(err)
         }
@@ -48,7 +48,7 @@ app.post('/login', (req, res) => {
     var query = "INSERT INTO joueur(nom,age,score) values ('" + donnees['nom'] + "','" + donnees['age'] + "','0');"
     connection.query(query, (err) => {
         if (!err) {
-            res.redirect("/jeu1")
+            res.render('PlusCourtChemin.twig')
         } else res.send(err)
     })
 })
