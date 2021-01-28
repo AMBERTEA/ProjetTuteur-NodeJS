@@ -86,6 +86,30 @@ let intervalId = null;
 drawGraph.setCanvasSize(1000, 500);   // Set the size of the canvas
 drawGraph.loadGraph(graph, c);
 
+function getActualSec(date){
+    var hour = date.getHours()
+    var min = date.getMinutes()
+    var seconde = date.getSeconds()
+    var tot = hour*3600 + min*60 + seconde
+    return tot
+}
+function calcTemp(date){
+    let date2 = new Date()
+    var tot = (date2.getHours()*3600 + date2.getMinutes()*60 + date2.getSeconds()) - date
+    return  tot
+
+}
+
+
+function validationFinale(playerPath, source, target){
+    var res = valider(playerPath, source, target)
+    var timepassed = calcTemp(getActualSec(date))
+    if(res === 1){
+        document.getElementById("isWin").value = "Perdu "
+    }else{
+        document.getElementById("isWin").value = timepassed
+    }
+}
 
 function AllSolution(G) {
     let source = null;
@@ -219,11 +243,14 @@ function compareToDijkstra(pathPlayer, pathDijkstra) {
         i++;
     }
     console.log(pathPlayer);
+    var change;
     if (isPlayerPathGood) {
         window.alert("Tu as gagné!");
+        return 0;
     } else {
         window.alert("Tu as perdu");
         drawSolution(pathDijkstra);
+        return  1;
         // Ce que tu devrais faire : drawSolution(pathDijkstra)
     }
 }
@@ -246,8 +273,9 @@ function valider(pathPlayer, source, target){
     //console.log(pathDijkstra);
     if (pathPlayer.length !== 0) {
         if (pathPlayer.pop() === target) {
+
             pathPlayer.push(target);
-            compareToDijkstra(pathPlayer, pathDijkstra, source, target);
+            return compareToDijkstra(pathPlayer, pathDijkstra, source, target);
         }
     } else window.alert("Tu n'as pas donné de solution,\n" +
         "si tu veux la solution ferme moi et click sur le boutton solution");

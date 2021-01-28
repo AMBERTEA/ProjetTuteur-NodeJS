@@ -1,0 +1,32 @@
+{% include 'NavBar.twig' %}
+
+
+<style>
+    {% include 'date.css' %}
+</style>
+<script>
+    var data = new Date()
+</script>
+
+<input class="classDate" id="idDate">
+<button onclick="calcTemp(getActualSec(data))">Mise a jour du temp sur la page</button>
+
+
+
+<script>
+
+    function getActualSec(date){
+        var hour = date.getHours()
+        var min = date.getMinutes()
+        var seconde = date.getSeconds()
+        var tot = hour*3600 + min*60 + seconde
+        return tot
+    }
+    function calcTemp(date){
+        let date2 = new Date()
+        var tot = (date2.getHours()*3600 + date2.getMinutes()*60 + date2.getSeconds()) - date
+        document.getElementById("idDate").value  = tot
+
+    }
+
+</script>

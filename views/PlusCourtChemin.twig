@@ -1,9 +1,18 @@
     {% include 'NavBar.twig' %}
 
     <p id="PlacePSeudo"> Votre pseudo est : {{ utilisateur.nom}} </p>
-    <label for="test">Test temps</label><input id="test" value="" type="text">
 
     <canvas id="myCanvas"></canvas>
+
+    <!-- Integrer le formulaire pour valider le choix-->
+        {{ joueur[0]}}
+        <input type="text" id="isWin" value="">
+        <button onclick=" validationFinale(playerPath, source, target,date)">Valider</button>
+
+
+    <!--<button onclick="">effacer</button>-->
+
+</body>
     <script>
         {% include '../public/assets/js/Graph.class.js' %}
         {% include '../public/assets/js/GraphADixNoeud.js' %}
@@ -13,6 +22,7 @@
     </script>
 
     <script>
+        var date = new Date();
         let source, target;
         do {
             source = Math.floor(Math.random() * graph.getOrder());
@@ -20,10 +30,9 @@
         } while (source === target);
 
         saveGameInProgress(graph,source,target,playerPath);
-
         drawSaveGameInProgress(graph,source,target);
+
+
+
     </script>
-    <button onclick="valider(playerPath, source, target)">Valider</button>
-    <!--<button onclick="">effacer</button>-->
-</body>
 </html>

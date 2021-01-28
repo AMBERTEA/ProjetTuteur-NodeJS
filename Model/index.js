@@ -45,10 +45,16 @@ app.post('/login', (req, res) => {
         age: req.body.age
     }
 
-    var query = "INSERT INTO joueur(nom,age,score) values ('" + donnees['nom'] + "','" + donnees['age'] + "','0');"
-    connection.query(query, (err) => {
+    var query = "INSERT INTO player(nom,age,score) values ('" + donnees['nom'] + "','" + donnees['age'] + "','0');"
+    connection.query(query, (err,list) => {
         if (!err) {
-            res.render('PlusCourtChemin.twig')
+            connection.query(`select * from player where nom = "${req.body.nom}"`,(err,result,list)=>{
+                if(!err) {
+                    res.render('PlusCourtChemin.twig', {joueur: result})
+                }else{
+                    res.send(err)
+                }
+            })
         } else res.send(err)
     })
 })
@@ -56,6 +62,10 @@ app.post('/login', (req, res) => {
 app.get('/Classement',((req, res) => {
     res.render('Classement.twig',{})
 }))
+
+app.get('/testDate',(req, res) => {
+    res.render('testDate.twig',{})
+})
 
 app.use(express.static('public'));
 
