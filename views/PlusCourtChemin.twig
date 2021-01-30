@@ -1,16 +1,14 @@
     {% include 'NavBar.twig' %}
 
-    <p id="PlacePSeudo"> Votre pseudo est : {{ utilisateur.nom}} </p>
 
     <canvas id="myCanvas"></canvas>
 
     <!-- Integrer le formulaire pour valider le choix-->
-        {{ joueur[0]}}
-        <input type="text" id="isWin" value="">
+    <form action="" method="post">
+        <input type="text" id="isWin"  name="time" value="">
         <button onclick=" validationFinale(playerPath, source, target,date)">Valider</button>
+    </form>
 
-
-    <!--<button onclick="">effacer</button>-->
 
 </body>
     <script>

@@ -101,12 +101,12 @@ function calcTemp(date){
 }
 
 
-function validationFinale(playerPath, source, target){
+async function validationFinale(playerPath, source, target) {
     var res = valider(playerPath, source, target)
     var timepassed = calcTemp(getActualSec(date))
-    if(res === 1){
+    if (res === 1) {
         document.getElementById("isWin").value = "Perdu "
-    }else{
+    } else {
         document.getElementById("isWin").value = timepassed
     }
 }

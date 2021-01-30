@@ -22,7 +22,11 @@ app.get('/',((req, res) => {
 }))
 
 app.get('/PlusCourtChemin',((req, res) => {
-    res.redirect('/login')
+    res.render('PlusCourtChemin.twig')
+}))
+app.post('/PlusCourtChemin',(async (req, res) => {
+    await new Promise(r => setTimeout(r, 2000))
+    res.render('loginForm.twig', {time: req.body.time})
 }))
 
 app.get('/login',(req, res) => {
@@ -40,12 +44,20 @@ app.get('/rank', (req, res) => {
 })
 
 app.post('/login', (req, res) => {
-    var donnees = {
-        nom: req.body.nom,
-        age: req.body.age
+    var time
+    if(req.body.time !== null){
+         time = req.body.time
+    }else{
+        time = 0
     }
 
-    var query = "INSERT INTO player(nom,age,score) values ('" + donnees['nom'] + "','" + donnees['age'] + "','0');"
+    var donnees = {
+        nom: req.body.nom,
+        age: req.body.age,
+        time : req.body.time
+    }
+
+    var query = "INSERT INTO player(nom,age,score) values ('" + donnees['nom'] + "','" + donnees['age'] + "','"+donnees["time"]+");"
     connection.query(query, (err,list) => {
         if (!err) {
             connection.query(`select * from player where nom = "${req.body.nom}"`,(err,result,list)=>{
