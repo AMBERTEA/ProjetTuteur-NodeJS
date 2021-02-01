@@ -1,0 +1,14 @@
+    {% include 'NavBar.twig' %}
+
+    <form class="boxform" method="post" action="">
+        <h1>Créer ton Compte</h1>
+        <input type="text"name="nom" placeholder="Nom">
+        <input type="number" name="age" placeholder="age">
+        <input type="text" disabled name="time" value="{{ time }}">
+        <input type="submit" name="" value="Submit">
+    </form>
+
+    {% include 'Footer.twig' %}
+
+</body>
+</html>

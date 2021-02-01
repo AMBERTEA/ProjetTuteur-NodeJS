@@ -24,13 +24,14 @@ app.get('/',((req, res) => {
 app.get('/PlusCourtChemin',((req, res) => {
     res.render('PlusCourtChemin.twig')
 }))
+
 app.post('/PlusCourtChemin',(async (req, res) => {
     await new Promise(r => setTimeout(r, 2000))
-    res.render('loginForm.twig', {time: req.body.time})
+    res.render('LoginForm.twig', {time: req.body.time})
 }))
 
 app.get('/login',(req, res) => {
-    res.render('loginForm.twig',{})
+    res.render('LoginForm.twig',{})
 })
 
 app.get('/rank', (req, res) => {
@@ -76,7 +77,7 @@ app.get('/Classement',((req, res) => {
 }))
 
 app.get('/testDate',(req, res) => {
-    res.render('testDate.twig',{})
+    res.render('TestDate.twig',{})
 })
 
 app.use(express.static('public'));

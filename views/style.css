@@ -7,6 +7,7 @@ body {
 
 a {
     text-decoration: none;
+    color: black;
     position: relative;
 }
 
@@ -32,6 +33,16 @@ ul li {
 .fdsPicture {
     width: 204px;
     height: 72px;
+}
+
+.iutPicture {
+    width: 200px;
+    height: 82px;
+}
+
+.container {
+    width: 75%;
+    margin: auto;
 }
 
 /*NavBar*/
@@ -99,4 +110,25 @@ ul li {
 .fdsPictureSidebar {
     width: 204px;
     height: 72px;
+}
+
+/*Footer*/
+
+.footer {
+    width: 80%;
+    padding: 30px 10%;
+    background-color: #FFFFFF;
+    border-top: solid 2px #f7eb9f;
+    display: flex;
+}
+
+.footer div {
+    width: 50%;
+    text-align: center;
+}
+
+/*Date*/
+input{
+    position: absolute;
+    left: 50%;
 }

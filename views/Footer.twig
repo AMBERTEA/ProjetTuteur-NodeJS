@@ -1,0 +1,33 @@
+    <div class="footer">
+        <div class="iutFooter">
+            <a href=""><img class="iutPicture" src="/assets/pictures/iut.png" alt="Vive l'IUT !"></a>
+        </div>
+
+        <div class="fdsFooter">
+            <a href="https://www.fetedelascience.fr/"><img class="fdsPicture" src="/assets/pictures/fds.png" alt="Vive la fête !"></a>
+        </div>
+    </div>
+
+</body>
+
+    <script>
+        {% include '../public/assets/js/Graph.class.js' %}
+        {% include '../public/assets/js/GraphADixNoeud.js' %}
+        {% include '../public/assets/js/Dijkstra.js' %}
+        {% include '../public/assets/js/DrawGraph.js' %}
+        {% include '../public/assets/js/JeuDuPlusCourtChemin.js' %}
+    </script>
+
+    <script>
+        var date = new Date();
+        let source, target;
+        do {
+            source = Math.floor(Math.random() * graph.getOrder());
+            target = Math.floor(Math.random() * graph.getOrder());
+        } while (source === target);
+
+        saveGameInProgress(graph, source, target, playerPath);
+        drawSaveGameInProgress(graph, source, target);
+    </script>
+
+</html>

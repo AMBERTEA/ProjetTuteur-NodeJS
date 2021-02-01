@@ -1,36 +1,11 @@
     {% include 'NavBar.twig' %}
 
-
     <canvas id="myCanvas"></canvas>
 
     <!-- Integrer le formulaire pour valider le choix-->
     <form action="" method="post">
-        <input type="text" id="isWin"  name="time" value="">
+        <input type="text" id="isWin" name="time" value="">
         <button onclick=" validationFinale(playerPath, source, target,date)">Valider</button>
     </form>
 
-
-</body>
-    <script>
-        {% include '../public/assets/js/Graph.class.js' %}
-        {% include '../public/assets/js/GraphADixNoeud.js' %}
-        {% include '../public/assets/js/Dijkstra.js' %}
-        {% include '../public/assets/js/DrawGraph.js' %}
-        {% include '../public/assets/js/JeuDuPlusCourtChemin.js' %}
-    </script>
-
-    <script>
-        var date = new Date();
-        let source, target;
-        do {
-            source = Math.floor(Math.random() * graph.getOrder());
-            target = Math.floor(Math.random() * graph.getOrder());
-        } while (source === target);
-
-        saveGameInProgress(graph,source,target,playerPath);
-        drawSaveGameInProgress(graph,source,target);
-
-
-
-    </script>
-</html>
+    {% include 'Footer.twig' %}

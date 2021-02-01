@@ -93,13 +93,13 @@ function getActualSec(date){
     var tot = hour*3600 + min*60 + seconde
     return tot
 }
+
 function calcTemp(date){
     let date2 = new Date()
     var tot = (date2.getHours()*3600 + date2.getMinutes()*60 + date2.getSeconds()) - date
-    return  tot
+    return tot
 
 }
-
 
 async function validationFinale(playerPath, source, target) {
     var res = valider(playerPath, source, target)
@@ -273,7 +273,6 @@ function valider(pathPlayer, source, target){
     //console.log(pathDijkstra);
     if (pathPlayer.length !== 0) {
         if (pathPlayer.pop() === target) {
-
             pathPlayer.push(target);
             return compareToDijkstra(pathPlayer, pathDijkstra, source, target);
         }
