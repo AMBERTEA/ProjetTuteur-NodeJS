@@ -26,14 +26,12 @@ app.get('/PlusCourtChemin',((req, res) => {
 }))
 
 app.post('/PlusCourtChemin',(async (req, res) => {
-    await new Promise(r => setTimeout(r, 2000))
-    res.render('LoginForm.twig', {time: req.body.time})
+    res.send(req.body.time + " | " + req.body.nom + " | " +req.body.age)
 }))
 
 app.get('/login',(req, res) => {
     res.render('LoginForm.twig',{})
 })
-
 app.get('/rank', (req, res) => {
     connection.query("SELECT * from JOUEUR", (err, list) => {
         if (!err) {
@@ -58,12 +56,12 @@ app.post('/login', (req, res) => {
         time : req.body.time
     }
 
-    var query = "INSERT INTO player(nom,age,score) values ('" + donnees['nom'] + "','" + donnees['age'] + "','"+donnees["time"]+");"
+    var query = "INSERT INTO player(nom,age,score) values ('" + donnees['nom'] + "','" + donnees['age'] + "',0);"
     connection.query(query, (err,list) => {
         if (!err) {
             connection.query(`select * from player where nom = "${req.body.nom}"`,(err,result,list)=>{
                 if(!err) {
-                    res.render('PlusCourtChemin.twig', {joueur: result})
+                    res.render('PlusCourtChemin.twig', {nom : req.body.nom,time : req.body.time,age : req.body.age})
                 }else{
                     res.send(err)
                 }
