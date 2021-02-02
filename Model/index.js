@@ -27,7 +27,13 @@ app.get('/PlusCourtChemin',((req, res) => {
 
 app.post('/PlusCourtChemin',(async (req, res) => {
     await setTimeout(() =>{
-        res.send(req.body.time + " | " + req.body.nom + " | " +req.body.age)
+        connection.query(`UPDATE joueur set score="${req.body.time}" where nom="${req.body.nom}" and age =${req.body.age}`,(err,list)=>{
+            if(!err){
+                res.redirect("/")
+            }else {
+                res.send(err)
+            }
+        })
     },2000)
 
 }))
@@ -36,7 +42,7 @@ app.get('/login',(req, res) => {
     res.render('LoginForm.twig',{})
 })
 app.get('/rank', (req, res) => {
-    connection.query("SELECT * from JOUEUR", (err, list) => {
+    connection.query("SELECT * from joueur", (err, list) => {
         if (!err) {
             res.render('PlusCourtChemin.twig', {joueurs: list})
         } else {
@@ -59,7 +65,7 @@ app.post('/login', (req, res) => {
         time : req.body.time
     }
 
-    var query = "INSERT INTO player(nom,age,score) values ('" + donnees['nom'] + "','" + donnees['age'] + "',0);"
+    var query = "INSERT INTO joueur(nom,age,score) values ('" + donnees['nom'] + "','" + donnees['age'] + "',0);"
     connection.query(query, (err,list) => {
         if (!err) {
             connection.query(`select * from player where nom = "${req.body.nom}"`,(err,result,list)=>{

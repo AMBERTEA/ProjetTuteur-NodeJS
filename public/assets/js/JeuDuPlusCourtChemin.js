@@ -102,13 +102,17 @@ function calcTemp(date){
 
 }
 
-async function validationFinale(playerPath, source, target) {
+async function validationFinale(playerPath, source, target,date) {
     var res = valider(playerPath, source, target)
     var timepassed = calcTemp(getActualSec(date))
     if (res === 1) {
-        document.getElementById("isWin").value = "Perdu "
+        document.getElementById("isWin").value = "Perdu"
+        document.getElementById("buttonValidate").disabled =true
     } else {
         document.getElementById("isWin").value = timepassed
+        document.getElementById("buttonValidate").disabled =false
+
+
     }
 }
 
@@ -247,11 +251,11 @@ function compareToDijkstra(pathPlayer, pathDijkstra) {
     var change;
     if (isPlayerPathGood) {
         window.alert("Tu as gagné!");
-        change = 0
+        return 0
     } else {
-        change = 1
         window.alert("Tu as perdu");
         drawSolution(pathDijkstra);
+        return 1
         // Ce que tu devrais faire : drawSolution(pathDijkstra)
     }
 }
