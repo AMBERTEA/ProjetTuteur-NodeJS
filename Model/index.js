@@ -26,7 +26,10 @@ app.get('/PlusCourtChemin',((req, res) => {
 }))
 
 app.post('/PlusCourtChemin',(async (req, res) => {
-    res.send(req.body.time + " | " + req.body.nom + " | " +req.body.age)
+    await setTimeout(() =>{
+        res.send(req.body.time + " | " + req.body.nom + " | " +req.body.age)
+    },2000)
+
 }))
 
 app.get('/login',(req, res) => {

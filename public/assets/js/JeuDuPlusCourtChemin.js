@@ -86,6 +86,7 @@ let intervalId = null;
 drawGraph.setCanvasSize(1000, 500);   // Set the size of the canvas
 drawGraph.loadGraph(graph, c);
 
+
 function getActualSec(date){
     var hour = date.getHours()
     var min = date.getMinutes()
@@ -246,32 +247,23 @@ function compareToDijkstra(pathPlayer, pathDijkstra) {
     var change;
     if (isPlayerPathGood) {
         window.alert("Tu as gagné!");
-        return 0;
+        change = 0
     } else {
+        change = 1
         window.alert("Tu as perdu");
         drawSolution(pathDijkstra);
-        return  1;
         // Ce que tu devrais faire : drawSolution(pathDijkstra)
     }
 }
 
-function effacer(G){
-    for (let node = 0; node<playerPath.length; node++){
-        drawGraph.setNodeColor(node,255,255,255);
-        for (let edge = 0; edge<playerPath.length; edge++){
-            if (G.isEdge(node,edge))
-                drawGraph.setEdgeColor(node,edge,255,255,255);
-        }
-    }
-    playerPath = [];
-}
 
 function valider(pathPlayer, source, target){
+    console.log("Test sur target : "+target)
     let pathDijkstra = dijkstraPath(source, target);
 
-    //console.log(pathPlayer);
-    //console.log(pathDijkstra);
     if (pathPlayer.length !== 0) {
+        //console.log(pathPlayer.pop())
+        //console.log("console log de target valider : "+target)
         if (pathPlayer.pop() === target) {
             pathPlayer.push(target);
             return compareToDijkstra(pathPlayer, pathDijkstra, source, target);

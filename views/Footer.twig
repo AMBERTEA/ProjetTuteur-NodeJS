@@ -19,12 +19,17 @@
     </script>
 
     <script>
-        var date = new Date();
+        let date = new Date();
         let source, target;
         do {
             source = Math.floor(Math.random() * graph.getOrder());
             target = Math.floor(Math.random() * graph.getOrder());
         } while (source === target);
+        document.getElementById("testCorrection").addEventListener('click',(e)=>{
+            valider(playerPath, source, target)
+        })
+
+        console.log("azy t'as compris : "+target)
 
         saveGameInProgress(graph, source, target, playerPath);
         drawSaveGameInProgress(graph, source, target);
