@@ -1,0 +1,52 @@
+body, html {
+    font-family: "Helvetica";
+    width: 100%;
+    overflow-x: hidden !important;
+}
+
+.zindex- {
+    z-index: -1;
+}
+
+.navbar {
+    height: 150px;
+}
+
+.imgFdsNavBarAccueil {
+    width: 204px;
+    height: 72px;
+}
+
+.accueilEnfant {
+    position: absolute;
+    top: -400px;
+    right: -300px;
+}
+
+.imgAccueilEnfant {
+    border-radius: 50%;
+    background-size: cover;
+    width: 1000px;
+    height: 1000px;
+}
+
+.presentationFdsAccueil {
+    height: 400px;
+}
+
+.presentationFdsAccueil2 {
+    margin: auto;
+}
+
+.presentationIutAccueil {
+    margin-top: 10%;
+}
+
+.presentationIutAccueil2 {
+    margin: auto 0;
+}
+
+.imgIutFouleAccueil {
+    width: 100%;
+}
+
