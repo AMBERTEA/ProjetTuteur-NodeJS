@@ -1,6 +1,6 @@
 @font-face {
-    font-family: Roboto;
-    src: url("Roboto-Regular.ttf") format("TrueType");
+    font-family: 'roboto';
+    src: url("public/assets/fonts/Roboto-Regular.ttf");
 }
 
 body, html {
@@ -16,7 +16,7 @@ p, h1, h2 {
 }
 
 h1, h2, a {
-    font-family: Roboto;
+    font-family: "Gill Sans", sans-serif;;
 }
 
 /* NavBar */
@@ -26,7 +26,7 @@ h1, h2, a {
 
 .nav-item {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .imgFdsNavBarAccueil {
@@ -173,7 +173,11 @@ h1, h2, a {
         text-align: center;
         border: solid 1px #00000010;
         border-radius: 26px;
-        box-shadow: 1px 3px #00000025, 1px 3px #00000025;
+    }
+
+    .rectangles:hover {
+        box-shadow: 1px 3px #00000025, 2px 3px #00000025;
+        transition: 0.3s;
     }
 
     .imageRectangleAmuser {
@@ -202,5 +206,55 @@ h1, h2, a {
 
     .paragrapheRectangles {
         font-size: 12px;
+    }
+
+    /* Jeux accueil */
+    .menuJeuxAccueilAll {
+        height: 802px;
+        width: 100%;
+        padding: 95px 0 100px 0;
+    }
+
+    .menuJeuxAccueil {
+        height: 607px;
+        width: 100%;
+    }
+
+    .titreJeuxAccueil {
+        height: 60px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 34px;
+    }
+
+    .paragrapheJeuxAcceuil {
+        height: 71px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 37px;
+    }
+
+    .jeuxAccueil {
+        display: flex;
+    }
+
+    .jeu {
+        height: 404px;
+        width: 494px;
+        margin: auto;
+        text-align: center;
+        display: block;
+    }
+
+    .imagePlusCourtChemin {
+        height: 360px;
+        width: 494px;
+    }
+
+    .boutonPlusCourtChemin {
+        width: 89px;
+        height: 89px;
+        top: -55px;
+        position: relative;
     }
 }
