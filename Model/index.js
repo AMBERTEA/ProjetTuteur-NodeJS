@@ -22,7 +22,7 @@ app.get('/',((req, res) => {
 }))
 
 app.get('/PlusCourtChemin',((req, res) => {
-    res.render('PlusCourtChemin.twig')
+    res.render('carouselPlusCourtChemin.twig')
 }))
 
 app.post('/PlusCourtChemin',(async (req, res) => {
@@ -35,7 +35,6 @@ app.post('/PlusCourtChemin',(async (req, res) => {
             }
         })
     },2000)
-
 }))
 
 app.get('/login',(req, res) => {
@@ -53,9 +52,9 @@ app.get('/rank', (req, res) => {
 
 app.post('/login', (req, res) => {
     var time
-    if(req.body.time !== null){
+    if(req.body.time !== null) {
          time = req.body.time
-    }else{
+    } else {
         time = 0
     }
 
@@ -71,7 +70,7 @@ app.post('/login', (req, res) => {
             connection.query(`select * from player where nom = "${req.body.nom}"`,(err,result,list)=>{
                 if(!err) {
                     res.render('PlusCourtChemin.twig', {nom : req.body.nom,time : req.body.time,age : req.body.age})
-                }else{
+                } else {
                     res.send(err)
                 }
             })
