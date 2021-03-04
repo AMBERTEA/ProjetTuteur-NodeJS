@@ -21,8 +21,12 @@ app.get('/',((req, res) => {
     res.render('Accueil.twig',{})
 }))
 
-app.get('/PlusCourtChemin',((req, res) => {
+app.get('/ExplicationPlusCourtChemin',((req, res) => {
     res.render('carouselPlusCourtChemin.twig')
+}))
+
+app.get('/JeuPlusCourtChemin',((req, res) => {
+    res.render('jeuPlusCourtChemin.twig')
 }))
 
 app.post('/PlusCourtChemin',(async (req, res) => {
