@@ -8,6 +8,7 @@ class DrawGraph {
     canvasBg = false;
     canvasBgloaded = false;
     canvasBackground = null;
+    images = document.getElementsByClassName("planete")
 
     nodes = [];
     nodesRadius = [];
@@ -168,12 +169,14 @@ class DrawGraph {
      * @param {Number} n Index of the node to draw.
      */
     drawNode(n) {
+        var i = 0
         if (n < 0 || n > this.nodes.length)
             throw new Error("Node must be valid in the graph.");
 
-        let x = this.nodes[n].x;
-        let y = this.nodes[n].y;
+        let x = (this.nodes[n].x);
+        let y = (this.nodes[n].y);
 
+    
         let radius = this.nodesRadius[n];
         let color = this.nodesColors[n];
 
@@ -182,8 +185,10 @@ class DrawGraph {
 
         this.canvasCtx.beginPath();
 
-        this.canvasCtx.arc(x, y, radius, startAngle, endAngle, true);
+       
+        this.canvasCtx.drawImage(this.images[n],x - 25,y -25 ,this.images[n].width/10,this.images[n].height/10)
 
+   
         this.canvasCtx.fillStyle = "rgb(" + color.r + "," + color.g + "," + color.b + ")";
         this.canvasCtx.fill();
 
@@ -221,6 +226,10 @@ class DrawGraph {
         this.canvasCtx.stroke();
 
         this.canvasCtx.closePath();
+
+        this.canvasCtx.fillStyle = "pink";
+        this.canvasCtx.font = "25px sans serif";
+        this.canvasCtx.fillText(graph.getWeight(u,v),((x1+x2)/2),((y1+y2)/2));
     }
 
 

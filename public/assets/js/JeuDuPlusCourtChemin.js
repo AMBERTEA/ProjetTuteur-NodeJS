@@ -21,70 +21,160 @@ let G = graph.addNode("G");
 let H = graph.addNode("H");
 let I = graph.addNode("I");
 let J = graph.addNode("J");
+let K = graph.addNode("K");
+let L = graph.addNode("L")
+let M = graph.addNode("M");
+let N = graph.addNode("N");
+let O = graph.addNode("O");
+let P = graph.addNode("P");
+let Q = graph.addNode("Q");
+let R = graph.addNode("R");
+let S = graph.addNode("S");
 
-graph.addEdge(A,B,5);
-graph.addEdge(A,D,2);
-graph.addEdge(A,E,3);
-graph.addEdge(A,F,20);
-graph.addEdge(A,H,1);
 
-graph.addEdge(B,A,5);
-graph.addEdge(B,C,6);
-graph.addEdge(B,E,10);
-graph.addEdge(B,G,15);
+let a = []
+for (let index = 0; index < 45; index++) {
+    a.push(random())
+    
+}
+graph.addEdge(A,B, a[0]);
+graph.addEdge(A,D, a[1]);
+graph.addEdge(A,E, a[2]);
+graph.addEdge(A,F, a[3]);
+graph.addEdge(A,H, a[4]);
 
-graph.addEdge(C,B,6);
-graph.addEdge(C,E,9);
-graph.addEdge(C,F,11);
-graph.addEdge(C,G,3);
+graph.addEdge(B,C,a[5]);
+graph.addEdge(B,A,a[0]);
 
-graph.addEdge(D,A,2);
-graph.addEdge(D,I,12);
+graph.addEdge(C,D, a[6]);
+graph.addEdge(C,I, a[7]);
+graph.addEdge(C,B, a[5]);
+graph.addEdge(C,J, a[36]);
 
-graph.addEdge(E,A,3);
-graph.addEdge(E,B,10);
-graph.addEdge(E,C,9);
-graph.addEdge(E,F,2);
-graph.addEdge(E,H,4);
-graph.addEdge(E,I,3);
-graph.addEdge(E,J,7);
 
-graph.addEdge(F,A,20);
-graph.addEdge(F,C,11);
-graph.addEdge(F,E,2);
-graph.addEdge(F,I,1);
-graph.addEdge(F,J,7);
+graph.addEdge(E,H, a[8])
+graph.addEdge(E,G, a[9])
+graph.addEdge(E,A, a[2]);
 
-graph.addEdge(G,B,15);
-graph.addEdge(G,C,3);
-graph.addEdge(G,I,12);
-graph.addEdge(G,J,4);
+graph.addEdge(F,M, a[10])
+graph.addEdge(F,A, a[3]);
 
-graph.addEdge(H,A,1);
-graph.addEdge(H,E,4);
-graph.addEdge(H,I,8);
+graph.addEdge(D,I, a[12])
+graph.addEdge(D,A, a[1]);
+graph.addEdge(D,C, a[6]);
 
-graph.addEdge(I,D,12);
-graph.addEdge(I,E,3);
-graph.addEdge(I,F,1);
-graph.addEdge(I,G,12);
-graph.addEdge(I,H,8);
+graph.addEdge(I,H, a[14])
+graph.addEdge(I,K, a[15])
+graph.addEdge(I,J, a[16])
+graph.addEdge(I,C, a[7]);
+graph.addEdge(I,D, a[12])
 
-graph.addEdge(J,E,7);
-graph.addEdge(J,F,7);
-graph.addEdge(J,G,4);
+
+graph.addEdge(G,H, a[17])
+graph.addEdge(G,M, a[18])
+graph.addEdge(G,E, a[9])
+
+graph.addEdge(H,K, a[19])
+graph.addEdge(H,L, a[20])
+graph.addEdge(H,A, a[4]);
+graph.addEdge(H,E, a[8])
+graph.addEdge(H,I, a[14])
+graph.addEdge(H,G, a[17])
+
+graph.addEdge(M,N, a[21])
+graph.addEdge(M,F, a[10])
+graph.addEdge(M,G, a[18])
+
+graph.addEdge(N,M, a[21])
+graph.addEdge(N,L, a[24])
+graph.addEdge(N,O, a[35])
+graph.addEdge(N,P, a[37])
+
+
+graph.addEdge(L,K, a[22])
+graph.addEdge(L,O, a[23])
+graph.addEdge(L,N, a[24])
+graph.addEdge(L,H, a[20])
+
+graph.addEdge(K,Q, a[25])
+graph.addEdge(K,O, a[26])
+graph.addEdge(K,I, a[15])
+graph.addEdge(K,H, a[19])
+graph.addEdge(K,L, a[22])
+
+graph.addEdge(J,R, a[27])
+graph.addEdge(J,Q, a[28])
+graph.addEdge(J,I, a[16])
+graph.addEdge(J,C, a[36]);
+
+graph.addEdge(Q,R, a[29])
+graph.addEdge(Q,S, a[30])
+graph.addEdge(Q,O, a[31])
+graph.addEdge(Q,K, a[25])
+graph.addEdge(Q,J, a[28])
+
+graph.addEdge(R,S, a[32])
+graph.addEdge(R,J, a[27])
+graph.addEdge(R,Q, a[29])
+
+graph.addEdge(S,R, a[32])
+graph.addEdge(S,O, a[33])
+graph.addEdge(S,Q, a[30])
+
+graph.addEdge(O,S, a[33])
+graph.addEdge(O,K, a[26])
+graph.addEdge(O,P, a[34])
+graph.addEdge(O,N, a[35])
+graph.addEdge(O,L, a[23])
+graph.addEdge(O,Q, a[31])
+
+graph.addEdge(P,S, a[36])
+graph.addEdge(P,O, a[34])
+graph.addEdge(P,N, a[37])
+
 
 graph.print();
 
-let c = [[160,50], [443,50], [642,50], [26,250], [215,250], [531,250], [815,250], [160,450], [443,450], [642,450]];
+
+let c = [
+    [69,362],
+    [163,172],
+    [369,80],
+    [349,243],
+    [254,444],
+    [173,661],
+    [410,597],
+    [504,412],
+    [550,162],
+    [688,38],
+    [768,274],
+    [710,526],
+    [591,685],
+    [885,653],
+    [928,390],
+    [1067,585],
+    [896,140],
+    [1082,60],
+    [1122,356]
+]
+
+
+
 
 let drawGraph = new DrawGraph("myCanvas");
+
 
 let playerPath = [];
 let intervalId = null;
 
-drawGraph.setCanvasSize(1000, 500);   // Set the size of the canvas
+drawGraph.setCanvasSize(window.screen.width,window.screen.height);   // Set the size of the canvas
+drawGraph.loadCanvasBackground("/assets/pictures/game/fondjeu.jpg");
 drawGraph.loadGraph(graph, c);
+
+
+function random(){
+    return Math.floor(Math.random()*(15 - 2 + 1))+1
+}
 
 
 function getActualSec(date){

@@ -68,7 +68,7 @@ class Graph {
     getWeight(from,to) {
         let weight = this.isEdge(from,to);
 
-        return (weight != -1) ? weight : Infinity;
+        return (weight !== -1) ? weight : Infinity;
     }
 
     print() {

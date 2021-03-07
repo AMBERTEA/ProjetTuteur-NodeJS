@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+
+<img src="/assets/pictures/game/Groupe 347@3x.png" alt="" class="planete point">
+<img src="/assets/pictures/game/Groupe 349@3x.png" alt="" class="planete point">
+<img src="/assets/pictures/game/Groupe 352@3x.png" alt="" class="planete point">
+<img src="/assets/pictures/game/Groupe 355@3x.png" alt="" class="planete point">
+<img src="/assets/pictures/game/Groupe 358@3x.png" alt="" class="planete point">
+<img src="/assets/pictures/game/Groupe 420@3x.png" alt="" class="planete point">
+<img src="/assets/pictures/game/Groupe 421@3x.png" alt="" class="planete point">
+<img src="/assets/pictures/game/Groupe 425@3x.png" alt="" class="planete point">
+<img src="/assets/pictures/game/Groupe 429@3x.png" alt="" class="planete point">
+<img src="/assets/pictures/game/Groupe 431@3x.png" alt="" class="planete point">
+<img src="/assets/pictures/game/Groupe 433@3x.png" alt="" class="planete point">
+<img src="/assets/pictures/game/Groupe 520@3x.png" alt="" class="planete point">
+<img src="/assets/pictures/game/Groupe 521@3x.png" alt="" class="planete point">
+<img src="/assets/pictures/game/Groupe 523@3x.png" alt="" class="planete point">
+<img src="/assets/pictures/game/Groupe 525@3x.png" alt="" class="planete point">
+<img src="/assets/pictures/game/Groupe 527@3x.png" alt="" class="planete point">
+<img src="/assets/pictures/game/Groupe 532@3x.png" alt="" class="planete point">
+<img src="/assets/pictures/game/Groupe 536@3x.png" alt="" class="planete point">
+<img src="/assets/pictures/game/Groupe 343@3x.png" alt="" class="planete point">
+
+<canvas id="myCanvas"></canvas>
+
+
+<!--
+     <div class="plateau"></div>
+
+
+
+    <img src="images/plusCourtChemin/astronot" alt="" id="astronaute"  >
+
+
+</div>
+
+<p id="btn-fini">FINI</p>
+
+-->
+
+
+
+
+
+</body>
+
+<script src="/assets/js/Graph.class.js"></script>
+<script src="/assets/js/Dijkstra.js"></script>
+<script src="/assets/js/DrawGraph.js"></script>
+<script src="/assets/js/GraphADixNoeud.js"></script>
+<script src="/assets/js/JeuDuPlusCourtChemin.js"></script>
+
+<script>
+    let date = new Date();
+    let source, target;
+    do {
+        source =0;
+        target = 6;
+    } while (source === target);
+
+    /*
+    document.getElementById("testCorrection").addEventListener('click',(e)=>{
+        validationFinale(playerPath, source, target,date)
+    })
+    */
+
+    console.log("azy t'as compris : "+target)
+
+    saveGameInProgress(graph, source, target, playerPath);
+    drawSaveGameInProgress(graph, source, target);
+</script>
+
+</html>
