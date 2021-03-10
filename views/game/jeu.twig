@@ -5,54 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/style/styleJeuPCC.css">
 </head>
 <body>
 
-<img src="/assets/pictures/game/astronaute.gif" alt="astronot" id="astronot">
+    <div class="IUJeu">
+        <button onclick="valider(playerPath,source,target)">Valider</button>
+        <button onclick="recommencer(source,playerPath)">Recommencer</button>
+    </div>
 
+<img src="/assets/pictures/plusCourtChemin/astronaut.gif" alt="astronot" id="astronot">
 
-<img src="/assets/pictures/game/Groupe 347@3x.png" alt="" class="planete point">
-<img src="/assets/pictures/game/Groupe 349@3x.png" alt="" class="planete point">
-<img src="/assets/pictures/game/Groupe 352@3x.png" alt="" class="planete point">
-<img src="/assets/pictures/game/Groupe 355@3x.png" alt="" class="planete point">
-<img src="/assets/pictures/game/Groupe 358@3x.png" alt="" class="planete point">
-<img src="/assets/pictures/game/Groupe 420@3x.png" alt="" class="planete point">
-<img src="/assets/pictures/game/Groupe 421@3x.png" alt="" class="planete point">
-<img src="/assets/pictures/game/Groupe 425@3x.png" alt="" class="planete point">
-<img src="/assets/pictures/game/Groupe 429@3x.png" alt="" class="planete point">
-<img src="/assets/pictures/game/Groupe 431@3x.png" alt="" class="planete point">
-<img src="/assets/pictures/game/Groupe 433@3x.png" alt="" class="planete point">
-<img src="/assets/pictures/game/Groupe 520@3x.png" alt="" class="planete point">
-<img src="/assets/pictures/game/Groupe 521@3x.png" alt="" class="planete point">
-<img src="/assets/pictures/game/Groupe 523@3x.png" alt="" class="planete point">
-<img src="/assets/pictures/game/Groupe 525@3x.png" alt="" class="planete point">
-<img src="/assets/pictures/game/Groupe 527@3x.png" alt="" class="planete point">
-<img src="/assets/pictures/game/Groupe 532@3x.png" alt="" class="planete point">
-<img src="/assets/pictures/game/Groupe 536@3x.png" alt="" class="planete point">
-<img src="/assets/pictures/game/Groupe 343@3x.png" alt="" class="planete point">
+<img src="/assets/pictures/plusCourtChemin/planete1.png" alt="" class="planete point">
+<img src="/assets/pictures/plusCourtChemin/planete2.png" alt="" class="planete point">
+<img src="/assets/pictures/plusCourtChemin/planete3.png" alt="" class="planete point">
+<img src="/assets/pictures/plusCourtChemin/planete4.png" alt="" class="planete point">
+<img src="/assets/pictures/plusCourtChemin/planete5.png" alt="" class="planete point">
+<img src="/assets/pictures/plusCourtChemin/planete6.png" alt="" class="planete point">
+<img src="/assets/pictures/plusCourtChemin/planete7.png" alt="" class="planete point">
+<img src="/assets/pictures/plusCourtChemin/planete8.png" alt="" class="planete point">
+<img src="/assets/pictures/plusCourtChemin/planete9.png" alt="" class="planete point">
+<img src="/assets/pictures/plusCourtChemin/planete10.png" alt="" class="planete point">
+<img src="/assets/pictures/plusCourtChemin/planete11.png" alt="" class="planete point">
+<img src="/assets/pictures/plusCourtChemin/planete12.png" alt="" class="planete point">
+<img src="/assets/pictures/plusCourtChemin/planete13.png" alt="" class="planete point">
+<img src="/assets/pictures/plusCourtChemin/planete14.png" alt="" class="planete point">
+<img src="/assets/pictures/plusCourtChemin/planete15.png" alt="" class="planete point">
+<img src="/assets/pictures/plusCourtChemin/planete16.png" alt="" class="planete point">
+<img src="/assets/pictures/plusCourtChemin/planete17.png" alt="" class="planete point">
+<img src="/assets/pictures/plusCourtChemin/planete18.png" alt="" class="planete point">
+<img src="/assets/pictures/plusCourtChemin/terre.png" alt="" class="planete point">
 
-<canvas id="myCanvas" ></canvas>
-
-<button onclick="valider(playerPath,source,target)">Valider</button>
-
-
-<!--
-     <div class="plateau"></div>
-
-
-
-    <img src="images/plusCourtChemin/astronot" alt="" id="astronaute"  >
-
-
-</div>
-
-<p id="btn-fini">FINI</p>
-
--->
-
-
-
+    <div class="leCanvas">
+        <canvas id="myCanvas"></canvas>
+    </div>
 
 
 </body>
@@ -66,20 +52,12 @@
 <script>
     let date = new Date();
     let source, target;
-    source =0
+    source = 0
     target = 18
-
-
-    /*
-    document.getElementById("testCorrection").addEventListener('click',(e)=>{
-        validationFinale(playerPath, source, target,date)
-    })
-    */
 
     console.log("azy t'as compris : "+target)
 
     saveGameInProgress(graph, source, target, playerPath);
     drawSaveGameInProgress(graph, source, target);
 </script>
-
 </html>

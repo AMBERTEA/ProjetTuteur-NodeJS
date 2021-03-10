@@ -1,13 +1,13 @@
-
 @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
 
-
-
 canvas{
-    z-index: 0;
-    position: absolute;
-    top: 3%;
-    left: 3%;
+    z-index: -10;
+    background-color: #03010b;
+    border-radius: 25px;
+}
+
+.leCanvas {
+    margin: auto;
 }
 
 #astronot{
@@ -23,6 +23,7 @@ canvas{
 body,html{
     padding: 0;
     margin: 0;
+    background-color: #03010b;
     overflow: hidden !important;
 }
 
@@ -46,6 +47,7 @@ body,html{
     padding-top: 25px;
     transition: all 0.5s ease;
 }
+
 #btn-fini:hover{
     cursor: pointer;
     background-color: white;
@@ -67,6 +69,10 @@ body,html{
 }
 
 
-
+.IUJeu {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 
 
