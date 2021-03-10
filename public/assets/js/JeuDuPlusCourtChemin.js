@@ -1,13 +1,3 @@
-function placePseudo() {
-    var Pseudo = document.getElementById("idPseudo");
-
-    var PseudoText = Pseudo.value;
-    //on a en haut notre pseudo
-    //on veut l'ajouter maintnant à la balise PlacePseudo
-    var placeDuPseudo = document.getElementById("PlacePSeudo");
-    placeDuPseudo.innerHTML = "";
-    placeDuPseudo.innerHTML = "Votre pseudo est :" + PseudoText;
-}
 
 let graph = new Graph();
 
@@ -158,6 +148,10 @@ let c = [
     [1122,356]
 ]
 
+for (let i = 0; i < c.length; i++) {
+    c[i][0] = ((c[i][0]/1280) * (window.screen.width)) /1.5
+    c[i][1] = ((c[i][1]/800) * (window.screen.height)) /1.5
+}
 
 
 
@@ -167,8 +161,8 @@ let drawGraph = new DrawGraph("myCanvas");
 let playerPath = [];
 let intervalId = null;
 
-drawGraph.setCanvasSize(window.screen.width,window.screen.height);   // Set the size of the canvas
-drawGraph.loadCanvasBackground("/assets/pictures/game/fondjeu.jpg");
+drawGraph.setCanvasSize(window.screen.width /1.5,window.screen.height /1.5);   // Set the size of the canvas
+drawGraph.loadCanvasBackground("/assets/pictures/game/fondPCC.jpg");
 drawGraph.loadGraph(graph, c);
 
 
@@ -315,6 +309,18 @@ function saveGameInProgress(G, source, target, playerPath){
         if (playerPath.length === 0) playerPath.push(source);
         if (first !== target){
             if (n !== -1){
+
+                this.astronot.style.position = "absolute"
+                this.astronot.style.zIndex = 1
+                this.astronot.style.top = Math.floor(drawGraph.nodes[n].y).toString()+"px"
+                this.astronot.style.left = Math.floor(drawGraph.nodes[n].x).toString()+"px"
+                console.log("coordonée")
+                console.log()
+                console.log(Math.floor(drawGraph.nodes[n].x).toString())
+
+
+
+
                 if (G.isEdge(first,n)){
                    //console.log(playerPath);
                    playerPath.push(n);

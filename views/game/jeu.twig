@@ -9,6 +9,8 @@
 </head>
 <body>
 
+<img src="/assets/pictures/game/astronaute.gif" alt="astronot" id="astronot">
+
 
 <img src="/assets/pictures/game/Groupe 347@3x.png" alt="" class="planete point">
 <img src="/assets/pictures/game/Groupe 349@3x.png" alt="" class="planete point">
@@ -30,7 +32,9 @@
 <img src="/assets/pictures/game/Groupe 536@3x.png" alt="" class="planete point">
 <img src="/assets/pictures/game/Groupe 343@3x.png" alt="" class="planete point">
 
-<canvas id="myCanvas"></canvas>
+<canvas id="myCanvas" ></canvas>
+
+<button onclick="valider(playerPath,source,target)">Valider</button>
 
 
 <!--
@@ -62,10 +66,9 @@
 <script>
     let date = new Date();
     let source, target;
-    do {
-        source =0;
-        target = 6;
-    } while (source === target);
+    source =0
+    target = 18
+
 
     /*
     document.getElementById("testCorrection").addEventListener('click',(e)=>{

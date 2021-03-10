@@ -2,9 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
 
 
+
 canvas{
+    z-index: 0;
     position: absolute;
+    top: 3%;
+    left: 3%;
 }
+
+#astronot{
+    z-index: 1;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    left: 5%;
+    transition: all 1.5s ease;
+}
+
 body,html{
     padding: 0;
     margin: 0;
@@ -12,7 +27,7 @@ body,html{
 }
 
 .planete{
-    display: none   ;
+    display: none;
 }
 
 #btn-fini{
@@ -53,16 +68,5 @@ body,html{
 
 
 
-#astronaute{
-    position: absolute;
-    top: 10px;
-    left: 110px;
-    width: 200px;
-    height: 200px;
-    transition: all 0.5s ease;
-}
 
-#astronaute:hover{
-    transform: scaleX(-1);
-}
 

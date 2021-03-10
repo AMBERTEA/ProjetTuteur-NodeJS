@@ -8,7 +8,8 @@ class DrawGraph {
     canvasBg = false;
     canvasBgloaded = false;
     canvasBackground = null;
-    images = document.getElementsByClassName("planete")
+    images = document.getElementsByClassName("planete");
+    astronot = document.getElementById('astronot');
 
     nodes = [];
     nodesRadius = [];
@@ -116,7 +117,12 @@ class DrawGraph {
         this.canvasBackground = true;
 
         let bg = new Image();
+
+        bg.width = 10000
+        bg.height = 1000
+
         bg.src = imageURI;
+
         this.canvasBackground = bg;
     }
 
@@ -185,8 +191,8 @@ class DrawGraph {
 
         this.canvasCtx.beginPath();
 
-       
-        this.canvasCtx.drawImage(this.images[n],x - 25,y -25 ,this.images[n].width/10,this.images[n].height/10)
+
+        this.canvasCtx.drawImage(this.images[n],x - (this.images[n].width/30),y - (this.images[n].height/30),this.images[n].width/15   ,this.images[n].height/15)
 
    
         this.canvasCtx.fillStyle = "rgb(" + color.r + "," + color.g + "," + color.b + ")";
