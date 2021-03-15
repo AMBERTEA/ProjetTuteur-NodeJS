@@ -1,4 +1,4 @@
-function dijkstra(graph, source, target){
+    function dijkstra(graph, source, target){
     let Q = [];
     let dist = [];
     let prev = [];

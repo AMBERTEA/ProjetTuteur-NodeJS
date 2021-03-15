@@ -1,7 +1,6 @@
 @font-face {
-    font-family: "American Captain";
-    src: url("public/assets/fonts/American.ttf") format("ttf"),
-         url("public/assets/fonts/American.otf") format("otf");
+    font-family: 'American Captain';
+    src: url('../fonts/American.otf') format('truetype');
 }
 
 body, html {
@@ -24,20 +23,20 @@ body, html {
 
 /*Titre*/
 .divTitrePCC {
-    height: 112px;
-    width: 452px;
-    margin: 50px auto;
+    height: 45px;
+    width: 500px;
+    margin: 30px auto;
 }
 
 .titrePCC {
     height: 100%;
     width: 100%;
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     margin: 0;
     color: #ffffff;
     text-transform: uppercase;
-    font-family: "American Captain";
+    font-family: 'American Captain';
 }
 
 /*Tout le carrousel*/
@@ -47,7 +46,7 @@ body, html {
     background-color: #ffffff;
     border: solid 4px #371a45;
     border-radius: 45px;
-    margin: 80px auto 100px auto;
+    margin: 0 auto 100px auto;
 }
 
 .carousel-inner {

@@ -132,25 +132,25 @@ graph.print();
 
 
 let c = [
-    [69,362],
-    [163,172],
-    [369,80],
-    [349,243],
-    [254,482],
-    [173,661],
-    [410,597],
-    [468,412],
-    [550,162],
-    [688,38],
-    [768,274],
-    [710,526],
-    [591,685],
-    [885,653],
-    [928,390],
-    [1067,585],
-    [896,140],
-    [1082,60],
-    [1122,356]
+    [69,392],
+    [163,202],
+    [369,110],
+    [349,273],
+    [254,512],
+    [173,691],
+    [410,627],
+    [468,442],
+    [550,192],
+    [688,68],
+    [768,304],
+    [710,556],
+    [591,715],
+    [885,683],
+    [928,420],
+    [1067,625],
+    [896,170],
+    [1082,90],
+    [1122,386]
 ]
 
 for (let i = 0; i < c.length; i++) {
@@ -260,11 +260,13 @@ function drawSaveGameInProgress(G, source, target){
     drawGraph.draw();
 }
 
-function recommencer(source, playerPath){
+function recommencer(playerPath){
     playerPath = [];
+    playerPath.push(drawGraph.nodes[A]);
 
-    console.log(playerPath)
+    console.log(playerPath);
 
+    console.log(source)
     this.astronot.style.position = "absolute";
     this.astronot.style.zIndex = 1;
     this.astronot.style.top = Math.floor(drawGraph.nodes[source].y).toString()+"px";

@@ -7,7 +7,7 @@ canvas{
 }
 
 .leCanvas {
-    margin: auto;
+    margin: 50px;
 }
 
 #astronot{
@@ -71,8 +71,25 @@ body,html{
 
 .IUJeu {
     position: absolute;
-    right: 0;
-    top: 0;
+    display: block;
+    right: 40px;
+    top: 400px;
+}
+
+button {
+    width: 300px;
+    height: 54px;
+    font-family: "American Captain";
+    font-size: 20px;
+    color: white;
+    background-color: #f65c7a;
+    margin: 10px;
+    padding: 10px 80px 10px 80px;
+    border-radius: 20px;
+    border: solid 5px #371a45;
 }
 
 
+.sexe {
+    display: none;
+}

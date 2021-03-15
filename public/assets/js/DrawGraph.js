@@ -18,7 +18,7 @@ class DrawGraph {
     edges = [];
 
     DEFAULT_NODES_RADIUS = 20;
-    DEFAULT_EDGES_WIDTH = 2;
+    DEFAULT_EDGES_WIDTH = 0.5;
     DEFAULT_FILL_COLOR = {r: 255, g: 255, b: 255};
 
 
@@ -233,8 +233,8 @@ class DrawGraph {
 
         this.canvasCtx.closePath();
 
-        this.canvasCtx.fillStyle = "pink";
-        this.canvasCtx.font = "25px sans serif";
+        this.canvasCtx.fillStyle = "white";
+        this.canvasCtx.font = "20px sans serif";
         this.canvasCtx.fillText(graph.getWeight(u,v),((x1+x2)/2),((y1+y2)/2));
     }
 
