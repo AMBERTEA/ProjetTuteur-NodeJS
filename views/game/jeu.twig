@@ -6,10 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/assets/style/styleJeuPCC.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/segment7" type="text/css"/>
 </head>
 <body>
+    <div class="timer">
+        <p id="textMin">00 : 00 </p>
+    </div>
 
+    <div class="recommencer">
+        <button>Enregistrer mon score</button>
+    </div>
     <div class="IUJeu">
+
         <button onclick="valider(playerPath,source,target)">Valider</button>
         <br>
         <button class="sexe" disabled onclick="recommencer(playerPath)">Recommencer</button>
@@ -43,7 +51,7 @@
 
 
 </body>
-
+<script src="/assets/js/time.js"></script>
 <script src="/assets/js/Graph.class.js"></script>
 <script src="/assets/js/Dijkstra.js"></script>
 <script src="/assets/js/DrawGraph.js"></script>
