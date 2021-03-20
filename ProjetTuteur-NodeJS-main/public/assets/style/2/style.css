@@ -1,0 +1,10 @@
+.box{
+    position: absolute;
+    left: 50%;
+    height: 200px;
+    width: 200px;
+    color: red;
+    border: 1px black solid;
+    top: 50%;
+
+}

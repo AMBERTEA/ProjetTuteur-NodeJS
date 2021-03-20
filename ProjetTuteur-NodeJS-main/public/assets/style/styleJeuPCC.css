@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+canvas{
+    z-index: -10;
+    background-color: #03010b;
+    border-radius: 25px;
+}
+
+.leCanvas {
+    margin: 50px;
+}
+
+#astronot{
+    z-index: 1;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    left: 5%;
+    transition: all 1.5s ease;
+}
+
+body,html{
+    padding: 0;
+    margin: 0;
+    background-color: #03010b;
+    overflow: hidden !important;
+}
+
+.planete{
+    display: none;
+}
+
+#btn-fini{
+    height: 50px;
+    width: 200px;
+    border-radius: 5%;
+    border: 3px orange solid;
+    font-family: 'RocknRoll One',sans-serif;
+    position: absolute;
+    top: 10%;
+    background-color:#FFBF00;
+    right: 10%;
+    color: black;
+
+    text-align: center;
+    padding-top: 25px;
+    transition: all 0.5s ease;
+}
+
+#btn-fini:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+.point{
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+
+.point:hover{
+    background-color: brown;
+}
+.planete{
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+
+
+.IUJeu {
+    position: absolute;
+    display: inline;
+    right: 40px;
+    top: 400px;
+}
+#textMin{
+    font-family: 'Segment7Standard', serif;
+    color: white;
+    position: absolute;
+    display: inline;
+    right: 180px;
+    top: 370px;
+
+}
+.recommencer{
+    position: absolute;
+    display: inline;
+    right: 40px;
+    top: 500px;
+}
+button {
+    width: 300px;
+    height: 54px;
+    font-family: "American Captain";
+    font-size: 20px;
+    color: white;
+    background-color: #f65c7a;
+    margin: 10px;
+    padding: 10px 80px 10px 80px;
+    border-radius: 20px;
+    border: solid 5px #371a45;
+}
+
+#testCorrection{
+    width: 300px;
+    height: 54px;
+    font-family: "American Captain";
+    font-size: 20px;
+    color: white;
+    background-color: #f65c7a;
+    margin: 10px;
+    padding: 10px 80px 10px 80px;
+    border-radius: 20px;
+    border: solid 5px #371a45;
+}
