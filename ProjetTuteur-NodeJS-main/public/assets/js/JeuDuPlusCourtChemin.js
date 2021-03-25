@@ -1,5 +1,13 @@
-
+var doc = document.getElementById("difficulte").value
 let graph = new Graph();
+var c
+
+if(doc == "Facile"){
+
+}else if (doc == "Moyen"){
+
+
+
 
 let A = graph.addNode("A");
 let B = graph.addNode("B");
@@ -130,8 +138,7 @@ graph.addEdge(P,N, a[37]);
 
 graph.print();
 
-
-let c = [
+c = [
     [69,392],
     [163,202],
     [369,110],
@@ -152,7 +159,10 @@ let c = [
     [1082,90],
     [1122,386]
 ]
+}
+else{
 
+}
 for (let i = 0; i < c.length; i++) {
     c[i][0] = ((c[i][0]/1280) * (window.screen.width)) /1.5;
     c[i][1] = ((c[i][1]/800) * (window.screen.height)) /1.5;
