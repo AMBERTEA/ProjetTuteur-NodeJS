@@ -29,6 +29,16 @@ app.get('/JeuPlusCourtChemin',((req, res) => {
     res.render('jeuPlusCourtChemin.twig')
 }))
 
+app.get('/Classement',((req, res) => {
+    connection.query('SELECT * from joueur where score != 0',(err,list)=>{
+        if(!err){
+            res.render('Classement.twig',{joueurs : list})
+        }else{
+            res.send(err)
+        }
+    })
+}))
+
 app.post('/PlusCourtChemin',(async (req, res) => {
     await setTimeout(() =>{
         connection.query(`UPDATE joueur set score="${req.body.time}" where nom="${req.body.nom}" and age =${req.body.age}`,(err,list)=>{
@@ -44,15 +54,7 @@ app.post('/PlusCourtChemin',(async (req, res) => {
 app.get('/login',(req, res) => {
     res.render('LoginForm.twig',{})
 })
-app.get('/rank', (req, res) => {
-    connection.query("SELECT * from joueur", (err, list) => {
-        if (!err) {
-            res.render('PlusCourtChemin.twig', {joueurs: list})
-        } else {
-            res.send(err)
-        }
-    })
-})
+
 
 app.post('/ExplicationPlusCourtChemin', (req, res) => {
     var time
@@ -68,12 +70,12 @@ app.post('/ExplicationPlusCourtChemin', (req, res) => {
         time : req.body.time
     }
 
-    var query = "INSERT INTO joueur(nom,age,score) values ('" + donnees['nom'] + "','" + donnees['age'] + "',0);"
+    var query = "INSERT INTO joueur(nom,age,score,difficulte) values ('" + donnees['nom'] + "','" + donnees['age'] + "',0,'"+ req.body.difficulte +"');"
     connection.query(query, (err,list) => {
         if (!err) {
             connection.query(`select * from joueur where nom = "${req.body.nom}"`,(err,result,list)=>{
                 if(!err) {
-                    res.render('jeuPlusCourtChemin.twig', {nom : req.body.nom,time : req.body.time,age : req.body.age})
+                    res.render('jeuPlusCourtChemin.twig', {nom : req.body.nom,time : req.body.time,age : req.body.age,difficulte : req.body.difficulte})
                 } else {
                     res.send(err)
                 }
@@ -82,9 +84,6 @@ app.post('/ExplicationPlusCourtChemin', (req, res) => {
     })
 })
 
-app.get('/Classement',((req, res) => {
-    res.render('Classement.twig',{})
-}))
 
 app.get('/JeuSacADos',(req, res) => {
     res.render('vueSacADos.twig')
