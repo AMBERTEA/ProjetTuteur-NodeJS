@@ -22,11 +22,11 @@ app.get('/',((req, res) => {
 }))
 
 app.get('/ExplicationPlusCourtChemin',((req, res) => {
-    res.render('carouselPlusCourtChemin.twig')
+    res.render('CarrouselPlusCourtChemin.twig')
 }))
 
 app.get('/JeuPlusCourtChemin',((req, res) => {
-    res.render('jeuPlusCourtChemin.twig')
+    res.render('JeuPlusCourtChemin.twig')
 }))
 
 app.get('/Classement',((req, res) => {
@@ -75,7 +75,7 @@ app.post('/ExplicationPlusCourtChemin', (req, res) => {
         if (!err) {
             connection.query(`select * from joueur where nom = "${req.body.nom}"`,(err,result,list)=>{
                 if(!err) {
-                    res.render('jeuPlusCourtChemin.twig', {nom : req.body.nom,time : req.body.time,age : req.body.age,difficulte : req.body.difficulte})
+                    res.render('JeuPlusCourtChemin.twig', {nom : req.body.nom,time : req.body.time,age : req.body.age,difficulte : req.body.difficulte})
                 } else {
                     res.send(err)
                 }
@@ -86,7 +86,7 @@ app.post('/ExplicationPlusCourtChemin', (req, res) => {
 
 
 app.get('/JeuSacADos',(req, res) => {
-    res.render('vueSacADos.twig')
+    res.render('VueSacADos.twig')
 })
 
 app.get('/testDate',(req, res) => {
