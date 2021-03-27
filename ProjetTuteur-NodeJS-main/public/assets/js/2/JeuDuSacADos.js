@@ -37,16 +37,17 @@ function createButton(menu){
 
         document.getElementById(name).innerHTML = name+": "+item.nbr+"\nPoids: "+obj.getWeight()+"\nValeur: "+obj.getValue();
         document.getElementById(name).addEventListener('click', function(){
-            sacADosPlayer.addInSacPlayer(obj);
-            menu.remove(name);
+            if (sacADosPlayer.addInSacPlayer(obj) == 0)
+                menu.remove(name);
             document.getElementById(name).innerHTML = name+": "+item.nbr+"\nPoids: "+obj.getWeight()+"\nValeur: "+obj.getValue();
+            document.getElementById("sizeAndValue").innerHTML = "Poids: "+sacADosPlayer.getSacWeight()+"/"+sacADosPlayer.getSacSize()+"\nValeur: "+sacADosPlayer.getSacValue();
             if(item.nbr<=0){
                 document.getElementById(name).disabled = true;
             }
         });
     }
 }
-
+document.getElementById("sizeAndValue").innerHTML = "Poids: "+sacADosPlayer.getSacWeight()+"/"+sacADosPlayer.getSacSize()+" Valeur: "+sacADosPlayer.getSacValue();
 
 createButton(menu);
 
@@ -58,7 +59,9 @@ function compare(sacADosPlayer,sacADosSol){
     if(sacADosSol.getSacWeight() >= sacADosPlayer.getSacWeight() && sacADosSol.getSacValue() <= sacADosPlayer.getSacValue()){
         window.alert("Bravo");
     }else{
-        window.alert("C'est Faux");
+        window.alert("Tu pouvais faire mieux");
+        document.getElementById("boxSolution").style.display = "block";
+        document.getElementById("solution").innerHTML = "Poids: "+sacADosSol.getSacWeight()+"/"+sacADosSol.getSacSize()+" Valeur: "+sacADosSol.getSacValue();
     }
 }
 
@@ -76,6 +79,9 @@ document.getElementById("Effacé").addEventListener('click',function(){
         console.log(menu[key])
         document.getElementById(menu.getContainer()[key].object.getName()).innerHTML = menu.getContainer()[key].object.getName()+": "+menu.getContainer()[key].nbr+"\nPoids: "+menu.getContainer()[key].object.getWeight()+"\nValeur: "+menu.getContainer()[key].object.getValue();
         document.getElementById(menu.getContainer()[key].object.getName()).disabled = false;
+        document.getElementById("sizeAndValue").innerHTML = "Poids: "+sacADosPlayer.getSacWeight()+"/"+sacADosPlayer.getSacSize()+" Valeur: "+sacADosPlayer.getSacValue();
     }
 });
+
+
 console.log(sacADosSol);
