@@ -286,7 +286,7 @@ function saveGameInProgress(G, source, target, playerPath){
 
                 this.astronot.style.position = "absolute";
                 this.astronot.style.zIndex = 1;
-                this.astronot.style.top = Math.floor(drawGraph.nodes[n].y).toString()+"px";
+                this.astronot.style.top = Math.floor(drawGraph.nodes[n].y+100).toString()+"px";
                 this.astronot.style.left = Math.floor(drawGraph.nodes[n].x).toString()+"px";
                 console.log("coordonée");
                 console.log();

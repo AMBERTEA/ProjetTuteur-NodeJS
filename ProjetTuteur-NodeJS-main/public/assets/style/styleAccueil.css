@@ -67,6 +67,7 @@ h1, h2, a {
         position: absolute;
         top: -112px;
         right: -267px;
+        border-radius: 50%;
     }
 
     .imgAccueilEnfant {
@@ -137,13 +138,13 @@ h1, h2, a {
 
     /* Objetif IUT accueil */
     .objectifIutAcceuilAll {
-        height: 756px;
+        height: 656px;
         width: 100%;
         padding: 96px 0 95px 0;
     }
 
     .objectifIutAccueil {
-        height: 565px;
+        height: 465px;
         width: 100%;
     }
 
@@ -166,7 +167,7 @@ h1, h2, a {
     }
 
     .rectangles {
-        height: 340px;
+        height: 240px;
         width: 326px;
         margin: auto;
         padding: 0 29px;
@@ -202,10 +203,6 @@ h1, h2, a {
         font-size: 24px;
         font-weight: 500;
         margin: 24px 0 8px 0;
-    }
-
-    .paragrapheRectangles {
-        font-size: 12px;
     }
 
     /* Jeux accueil */

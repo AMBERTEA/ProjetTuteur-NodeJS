@@ -31,7 +31,7 @@ app.get('/JeuPlusCourtChemin',((req, res) => {
 
 app.get('/Classement',((req, res) => {
 
-    connection.query('SELECT DISTINCT nom,age,score joueur where score != 0',(err,list)=>{
+    connection.query('SELECT DISTINCT nom,age,score FROM joueur where score != 0',(err,list)=>{
         if(!err){
 
             res.render('Classement.twig',{joueurs : list})
@@ -59,7 +59,7 @@ app.get('/login',(req, res) => {
 app.post('/Classement',(req,res) =>{
     console.log(req.body.hiddenGame)
     if (req.body.hiddenGame === "jeu1" ){
-        let preparedStatement = `SELECT DISTINCT nom,age,score FROM joueur where difficulte = "${req.body.diffi}"`
+        let preparedStatement = `SELECT DISTINCT nom,age,score FROM joueur where difficulte = "${req.body.diffi}" order by score asc`
         connection.query(preparedStatement,(err,result) =>{
             if(!err){
                 console.log(result)
