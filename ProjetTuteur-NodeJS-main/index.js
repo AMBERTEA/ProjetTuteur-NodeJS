@@ -1,4 +1,4 @@
-const express = require('express')
+    const express = require('express')
 const app = express()
 const twig = require('twig')
 const bodyParser = require("body-parser");
@@ -30,8 +30,10 @@ app.get('/JeuPlusCourtChemin',((req, res) => {
 }))
 
 app.get('/Classement',((req, res) => {
-    connection.query('SELECT * from joueur where score != 0',(err,list)=>{
+
+    connection.query('SELECT DISTINCT nom,age,score joueur where score != 0',(err,list)=>{
         if(!err){
+
             res.render('Classement.twig',{joueurs : list})
         }else{
             res.send(err)
@@ -54,7 +56,25 @@ app.post('/PlusCourtChemin',(async (req, res) => {
 app.get('/login',(req, res) => {
     res.render('LoginForm.twig',{})
 })
+app.post('/Classement',(req,res) =>{
+    console.log(req.body.hiddenGame)
+    if (req.body.hiddenGame === "jeu1" ){
+        let preparedStatement = `SELECT DISTINCT nom,age,score FROM joueur where difficulte = "${req.body.diffi}"`
+        connection.query(preparedStatement,(err,result) =>{
+            if(!err){
+                console.log(result)
+                res.render('Classement.twig',{joueurs : result, donneePCC : true})
+            }else{
+                res.send(err)
+            }
+        })
 
+    }else{
+        //let preparedStatement
+        console.log("pa fini")
+
+    }
+} )
 
 app.post('/ExplicationPlusCourtChemin', (req, res) => {
     var time

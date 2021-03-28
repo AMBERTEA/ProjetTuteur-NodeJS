@@ -23,6 +23,7 @@ class Graph {
     }
 
     addNode(nodeName){
+
         if(this.nodes.includes(nodeName)) return -1;
         this.nodes.push(nodeName);
 
