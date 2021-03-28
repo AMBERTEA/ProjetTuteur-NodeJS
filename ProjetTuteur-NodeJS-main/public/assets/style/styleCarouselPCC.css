@@ -34,41 +34,59 @@ body, html {
     text-align: center;
     font-size: 40px;
     margin: 0;
-    color: #ffffff;
+    color: #371a45;
     text-transform: uppercase;
     font-family: 'American Captain';
 }
 
 /*Tout le carrousel*/
-.carousel {
-    width: 789px;
-    height: 497px;
+.styleCarousel {
+    width: 50%;
+    height: 300px;
     background-color: #ffffff;
     border: solid 4px #371a45;
     border-radius: 45px;
-    margin: 0 auto 100px auto;
+    margin: 12.5% 25%;
 }
 
-.carousel-inner {
-    width: 789px;
-    height: 497px;
+@media(min-width:992px) {
+    .styleCarousel {
+        width: 50%;
+        height: 400px;
+        background-color: #ffffff;
+        border: solid 4px #371a45;
+        border-radius: 45px;
+        margin: 120px 25%;
+    }
 }
 
-.containerCarousel {
-    width: 540px;
-    height: 437px;
-    margin: 30px 125px;
+/* Ordinateur l */
+@media(min-width:1200px) {
+    .styleCarousel {
+        width: 50%;
+        height: 500px;
+        background-color: #ffffff;
+        border: solid 4px #371a45;
+        border-radius: 45px;
+        margin: 150px 25%;
+    }
+}
+
+.carousel-item {
+    text-align: center;
+    padding: 50px 100px;
 }
 
 /*Page 1*/
 .imgAstronauteLecture {
     width: 126px;
     height: 165px;
-    margin-y: auto;
 }
 
 /*Page 2*/
-
+.imgMaps {
+    width: 100%;
+}
 
 /*Page 3*/
 .imgAstronauteFusee {
@@ -94,6 +112,5 @@ body, html {
 
 /*Paragraphes*/
 .paragraphes {
-    margin: auto;
     color: #371a45;
 }
