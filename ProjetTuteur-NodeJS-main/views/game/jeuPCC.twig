@@ -11,6 +11,8 @@
     <div class="timer">
         <p id="textMin">00 : 00</p>
     </div>
+    <input type="button" id="testCorrection"  value="correction">
+    <input type="button" id="testCorrection" onclick="window.location.reload()" value="refresh">
 
     <div class="buttonPCC">
         <form action="/PlusCourtChemin" method="post">
@@ -18,7 +20,7 @@
             <input type="hidden" id="name" name="nom" value="{{ nom }}">
             <input type="hidden" id="age" name="age" value="{{ age }}">
             <input type="hidden" id="difficulte" name="difficulte" value="{{ difficulte }}">
-            <input type="button" id="testCorrection"  value="correction">
+
             <button id="buttonValidate" disabled onclick="">Valider</button>
         </form>
     </div>
