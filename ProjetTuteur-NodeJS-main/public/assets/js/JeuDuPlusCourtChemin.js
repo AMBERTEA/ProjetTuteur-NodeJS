@@ -25,7 +25,6 @@ if(doc === "Facile") {
     let R = graph.addNode("R");
     let S = graph.addNode("S");
 
-
     let a = []
     for (let index = 0; index < 45; index++) {
         a.push(random())
@@ -157,6 +156,271 @@ if(doc === "Facile") {
     ]
 } else {
 
+    let A = graph.addNode("A");
+    let B = graph.addNode("B");
+    let C = graph.addNode("C");
+    let D = graph.addNode("D");
+    let E = graph.addNode("E");
+    let F = graph.addNode("F");
+    let G = graph.addNode("G");
+    let H = graph.addNode("H");
+    let I = graph.addNode("I");
+    let J = graph.addNode("J");
+    let K = graph.addNode("K");
+    let L = graph.addNode("L");
+    let M = graph.addNode("M");
+    let N = graph.addNode("N");
+    let O = graph.addNode("O");
+    let P = graph.addNode("P");
+    let Q = graph.addNode("Q");
+    let R = graph.addNode("R");
+    let S = graph.addNode("S");
+    let T = graph.addNode("T");
+    let U = graph.addNode("U");
+    let V = graph.addNode("V");
+    let W = graph.addNode("W");
+    let X = graph.addNode("X");
+    let Y = graph.addNode("Y");
+    let Z = graph.addNode("Z");
+
+    let AA = graph.addNode("AA");
+    let AB = graph.addNode("AB");
+    let AC = graph.addNode("AC");
+    let AD = graph.addNode("AD");
+    let AE = graph.addNode("AE");
+    let AF = graph.addNode("AF");
+    let AG = graph.addNode("AG");
+    let AH = graph.addNode("AH");
+    let AI = graph.addNode("AI");
+
+    let a = []
+    for (let index = 0; index < 45; index++) {
+        a.push(random())
+
+    }
+    graph.addEdge(A,B, a[0]);
+    graph.addEdge(B,A, a[0]);
+    graph.addEdge(B,C, a[1]);
+    graph.addEdge(C,B, a[1]);
+
+    graph.addEdge(C,D, a[2]);
+    graph.addEdge(D,C, a[2]);
+    graph.addEdge(D,E, a[3]);
+    graph.addEdge(E,D, a[3]);
+
+    graph.addEdge(E,F, a[4]);
+    graph.addEdge(F,E, a[4]);
+    graph.addEdge(A,L, a[5]);
+    graph.addEdge(L,A, a[5]);
+
+
+    graph.addEdge(B,G, a[6]);
+    graph.addEdge(G,B, a[6]);
+    graph.addEdge(A,G, a[7]);
+    graph.addEdge(G,A, a[7]);
+
+    graph.addEdge(B,H, a[8]);
+    graph.addEdge(H,B, a[8]);
+    graph.addEdge(G,H, a[9]);
+    graph.addEdge(H,G, a[9]);
+
+    graph.addEdge(H,C, a[10]);
+    graph.addEdge(C,H, a[10]);
+    graph.addEdge(L,G, a[11]);
+    graph.addEdge(G,L, a[11]);
+
+
+    graph.addEdge(G,M, a[12]);
+    graph.addEdge(M,G, a[12]);
+    graph.addEdge(L,S, a[13]);
+    graph.addEdge(S,L, a[13]);
+
+    graph.addEdge(L,AC, a[14]);
+    graph.addEdge(AC,L, a[14]);
+    graph.addEdge(AC,S, a[15]);
+    graph.addEdge(S,AC, a[15]);
+
+    graph.addEdge(M,S, a[16]);
+    graph.addEdge(S,M, a[16]);
+    graph.addEdge(M,N, a[17]);
+    graph.addEdge(N,M, a[17]);
+
+
+    graph.addEdge(N,O, a[18]);
+    graph.addEdge(O,N, a[18]);
+    graph.addEdge(H,O, a[19]);
+    graph.addEdge(O,H, a[19]);
+
+    graph.addEdge(M,T, a[20]);
+    graph.addEdge(T,M, a[20]);
+    graph.addEdge(O,T, a[21]);
+    graph.addEdge(T,O, a[21]);
+
+    graph.addEdge(S,T, a[22]);
+    graph.addEdge(T,S, a[22]);
+    graph.addEdge(S,AD, a[23]);
+    graph.addEdge(AD,S, a[23]);
+
+
+    graph.addEdge(AC,AD, a[24]);
+    graph.addEdge(AD,AC, a[24]);
+    graph.addEdge(AC,S, a[25]);
+    graph.addEdge(S,AC, a[25]);
+
+    graph.addEdge(T,AD, a[26]);
+    graph.addEdge(AD,T, a[26]);
+    graph.addEdge(O,U, a[27]);
+    graph.addEdge(U,O, a[27]);
+
+    graph.addEdge(T,U, a[28]);
+    graph.addEdge(U,T, a[28]);
+    graph.addEdge(AD,AE, a[29]);
+    graph.addEdge(AE,AD, a[29]);
+
+
+    graph.addEdge(AE,AF, a[30]);
+    graph.addEdge(AF,AE, a[30]);
+    graph.addEdge(AF,AG, a[31]);
+    graph.addEdge(AG,AF, a[31]);
+
+    graph.addEdge(AG,AH, a[32]);
+    graph.addEdge(AH,AG, a[32]);
+    graph.addEdge(AH,AI, a[33]);
+    graph.addEdge(AI,AH, a[33]);
+
+    graph.addEdge(AH,AB, a[34]);
+    graph.addEdge(AB,AH, a[34]);
+    graph.addEdge(AI,X, a[35]);
+    graph.addEdge(X,AI, a[35]);
+
+
+    graph.addEdge(R,X, a[36]);
+    graph.addEdge(X,R, a[36]);
+    graph.addEdge(AB,X, a[37]);
+    graph.addEdge(X,AB, a[37]);
+
+    graph.addEdge(F,R, a[38]);
+    graph.addEdge(R,F, a[38]);
+    graph.addEdge(F,K, a[39]);
+    graph.addEdge(K,F, a[39]);
+
+    graph.addEdge(E,K, a[40]);
+    graph.addEdge(K,E, a[40]);
+    graph.addEdge(D,J, a[41]);
+    graph.addEdge(J,D, a[41]);
+
+
+    graph.addEdge(J,K, a[42]);
+    graph.addEdge(K,J, a[42]);
+    graph.addEdge(C,I, a[43]);
+    graph.addEdge(I,C, a[43]);
+
+    graph.addEdge(I,P, a[44]);
+    graph.addEdge(P,I, a[44]);
+    graph.addEdge(I,J, a[45]);
+    graph.addEdge(J,I, a[45]);
+
+    graph.addEdge(J,P, a[46]);
+    graph.addEdge(P,J, a[46]);
+    graph.addEdge(J,Q, a[47]);
+    graph.addEdge(Q,J, a[47]);
+
+
+    graph.addEdge(Q,K, a[48]);
+    graph.addEdge(K,Q, a[48]);
+    graph.addEdge(P,Q, a[49]);
+    graph.addEdge(Q,P, a[49]);
+
+    graph.addEdge(P,V, a[50]);
+    graph.addEdge(V,P, a[50]);
+    graph.addEdge(V,Q, a[51]);
+    graph.addEdge(Q,V, a[51]);
+
+    graph.addEdge(Q,W, a[52]);
+    graph.addEdge(W,Q, a[52]);
+    graph.addEdge(V,W, a[53]);
+    graph.addEdge(W,V, a[53]);
+
+
+    graph.addEdge(W,R, a[54]);
+    graph.addEdge(R,W, a[54]);
+    graph.addEdge(K,R, a[55]);
+    graph.addEdge(R,K, a[55]);
+
+    graph.addEdge(W,AB, a[56]);
+    graph.addEdge(AB,W, a[56]);
+    graph.addEdge(V,AA, a[57]);
+    graph.addEdge(AA,V, a[57]);
+
+    graph.addEdge(AA,AH, a[58]);
+    graph.addEdge(AH,AA, a[58]);
+    graph.addEdge(AF,AA, a[68]);
+    graph.addEdge(AA,AF, a[68]);
+
+
+    graph.addEdge(Z,AA, a[59]);
+    graph.addEdge(AA,Z, a[59]);
+    graph.addEdge(Z,V, a[60]);
+    graph.addEdge(V,Z, a[60]);
+
+    graph.addEdge(O,I, a[61]);
+    graph.addEdge(I,O, a[61]);
+    graph.addEdge(T,Y, a[62]);
+    graph.addEdge(Y,T, a[62]);
+
+    graph.addEdge(Y,Z, a[63]);
+    graph.addEdge(Z,Y, a[63]);
+    graph.addEdge(Y,AF, a[64]);
+    graph.addEdge(AF,Y, a[64]);
+
+
+    graph.addEdge(AF,Z, a[65]);
+    graph.addEdge(Z,AF, a[65]);
+    graph.addEdge(U,V, a[66]);
+    graph.addEdge(V,U, a[66]);
+
+    graph.addEdge(O,V, a[67]);
+    graph.addEdge(V,O, a[67]);
+
+    graph.print();
+
+    c = [
+        [90, 95],
+        [303, 64],
+        [460, 110],
+        [613, 47],
+        [858, 64],
+        [1087, 97],
+        [173, 230],
+        [334, 213],
+        [584, 190],
+        [738, 162],
+        [983, 195],
+        [63, 387],
+        [205, 416],
+        [334, 376],
+        [474, 322],
+        [667, 306],
+        [849, 286],
+        [1101, 276],
+        [171, 559],
+        [334, 565],
+        [575, 439],
+        [772, 412],
+        [961, 400],
+        [1159, 384],
+        [498, 575],
+        [678, 533],
+        [871, 559],
+        [1036, 539],
+        [63, 650],
+        [251, 705],
+        [411, 705],
+        [629, 676],
+        [787, 717],
+        [977, 676],
+        [1159, 621]
+    ]
 }
 
 for (let i = 0; i < c.length; i++) {
