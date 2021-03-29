@@ -1,4 +1,5 @@
 var doc = document.getElementById("difficulte").value
+console.log(doc)
 let graph = new Graph();
 var c
 
@@ -154,7 +155,7 @@ if(doc === "Facile") {
         [1082,90],
         [1122,386]
     ]
-} else {
+} else if( doc == "Difficile") {
 
     let A = graph.addNode("A");
     let B = graph.addNode("B");
@@ -438,6 +439,7 @@ let drawGraph = new DrawGraph("myCanvas");
 
 let playerPath = [];
 let intervalId = null;
+
 
 drawGraph.setCanvasSize(window.screen.width /1.5,window.screen.height /1.5);   // Set the size of the canvas
 drawGraph.loadCanvasBackground("/assets/pictures/plusCourtChemin/fondPCC.jpg");

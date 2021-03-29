@@ -53,7 +53,7 @@ app.post('/ExplicationSacADos',((req, res) => {
     })
 }))
 
-app.get('/JeuPlusCourtChemin', ((req, res) => {
+app.get('/PlusCourtChemin', ((req, res) => {
     res.render('JeuPlusCourtChemin.twig')
 }))
 
@@ -124,6 +124,8 @@ app.post('/ExplicationPlusCourtChemin', (req, res) => {
         age: req.body.age,
         time: req.body.time
     }
+    console.log("valeur de la difficulté : " + req.body.difficulte2)
+
 
     var query = "INSERT INTO joueur(nom,age,score,difficulte) values ('" + donnees['nom'] + "','" + donnees['age'] + "',0,'" + req.body.difficulte + "');"
     connection.query(query, (err, list) => {

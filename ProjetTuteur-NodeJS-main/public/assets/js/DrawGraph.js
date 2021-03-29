@@ -176,7 +176,7 @@ class DrawGraph {
      */
     drawNode(n) {
         var i = 0
-        if (n < 0 || n > this.nodes.length)
+        if (n < 0 || n > this.nodes.length-1)
             throw new Error("Node must be valid in the graph.");
 
         let x = (this.nodes[n].x);
