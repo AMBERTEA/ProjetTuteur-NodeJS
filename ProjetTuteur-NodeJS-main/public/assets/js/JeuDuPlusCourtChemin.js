@@ -562,7 +562,14 @@ function calcTemp(date){
 }
 
 async function validationFinale(playerPath, source, target,date) {
+
+
     var res = valider(playerPath, source, target);
+
+    if (playerPath.length < dijkstraPath(source,target).length ){
+        console.log("toto")
+        return
+    }
     var timepassed = calcTemp(getActualSec(date));
     if (res === 1) {
         document.getElementById("isWin").value = "Perdu";
@@ -572,6 +579,8 @@ async function validationFinale(playerPath, source, target,date) {
         document.getElementById("buttonValidate").disabled =false;
     }
 }
+
+
 
 function dijkstraPath(source, target){
     let reversePath = dijkstra(graph, source, target);
