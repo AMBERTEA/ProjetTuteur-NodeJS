@@ -262,6 +262,13 @@ h1, h2, a {
         box-shadow: 1px 5px #dfdfdf60;
     }
 
+    .boutonSacADos {
+        width: 89px;
+        height: 89px;
+        top: -45px;
+        position: relative;
+    }
+
     /* Footer Accueil */
     .footerAccueilAll {
         width: 100%;
