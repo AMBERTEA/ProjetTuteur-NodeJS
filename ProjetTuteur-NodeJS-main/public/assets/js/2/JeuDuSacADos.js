@@ -1,21 +1,44 @@
-const maxWeight = 20;
+let maxWeight;
 
-let sacADosSol = new Sac(maxWeight);
-let sacADosPlayer = new Sac(maxWeight);
+let sacADosSol;
+let sacADosPlayer;
 
-let lampe = new survieObject(1,3,"lampe");
-let chocolat = new survieObject(1,2,"chocolat");
-let corde = new survieObject(5,4,"corde");
-let couteau = new survieObject(3,2,"couteau");
-let telephone = new survieObject(4,1,"telephone");
+let lampe;
+let chocolat;
+let corde;
+let couteau;
+let telephone;
+
+let monRandom = Math.floor(Math.random());
 
 let menu = new Container();
 
-menu.add(lampe,10);
-menu.add(chocolat,10);
-menu.add(corde,10);
-menu.add(couteau,10);
-menu.add(telephone,5);
+var doc = document.getElementById("difficulte").value
+
+if (doc === "Facile") {
+    maxWeight = Math.floor(Math.random()*10)+15;
+
+    sacADosSol = new Sac(maxWeight);
+    sacADosPlayer = new Sac(maxWeight);
+
+    lampe = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"lampe");
+    chocolat = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"chocolat");
+    corde = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"corde");
+    couteau = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"couteau");
+    telephone = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"telephone");
+
+    menu = new Container();
+
+    menu.add(lampe,Math.floor(Math.random()*3)+1);
+    menu.add(chocolat,Math.floor(Math.random()*3)+1);
+    menu.add(corde,Math.floor(Math.random()*3)+1);
+    menu.add(couteau,Math.floor(Math.random()*3)+1);
+    menu.add(telephone,Math.floor(Math.random()*3)+1);
+} else if (doc === "Moyen") {
+
+} else {
+
+}
 
 function createButton(menu){
     let cont = menu.getContainer()
