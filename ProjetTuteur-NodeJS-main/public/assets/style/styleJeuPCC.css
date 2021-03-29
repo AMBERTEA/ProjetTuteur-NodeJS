@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+body {
+    text-align: center;
+}
 
 canvas{
     z-index: -10;
@@ -16,7 +18,7 @@ canvas{
     width: 60px;
     height: 60px;
     top: 50%;
-    left: 5%;
+    left: 18%;
     transition: all 1.5s ease;
 }
 
@@ -32,7 +34,7 @@ body,html{
     width: 200px;
     border-radius: 5%;
     border: 3px orange solid;
-    font-family: 'RocknRoll One',sans-serif;
+    font-family: "American Captain";
     position: absolute;
     top: 10%;
     background-color:#FFBF00;
@@ -110,4 +112,13 @@ button {
     padding: 10px 80px 10px 80px;
     border-radius: 20px;
     border: solid 5px #371a45;
+}
+
+.buttonPCC {
+    display: block;
+}
+
+.timer {
+    font-family: "American Captain";
+    color: #ffffff;
 }

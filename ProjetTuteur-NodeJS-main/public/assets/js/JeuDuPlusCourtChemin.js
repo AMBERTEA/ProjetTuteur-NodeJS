@@ -634,19 +634,6 @@ function drawSaveGameInProgress(G, source, target){
     drawGraph.draw();
 }
 
-function recommencer(playerPath){
-    playerPath = [];
-    playerPath.push(drawGraph.nodes[A]);
-
-    console.log(playerPath);
-
-    console.log(source)
-    this.astronot.style.position = "absolute";
-    this.astronot.style.zIndex = 1;
-    this.astronot.style.top = Math.floor(drawGraph.nodes[source].y).toString()+"px";
-    this.astronot.style.left = Math.floor(drawGraph.nodes[source].x).toString()+"px";
-}
-
 function saveGameInProgress(G, source, target, playerPath){
     let first = source;
     drawGraph.initEvent((n) => {
@@ -656,8 +643,8 @@ function saveGameInProgress(G, source, target, playerPath){
 
                 this.astronot.style.position = "absolute";
                 this.astronot.style.zIndex = 1;
-                this.astronot.style.top = Math.floor(drawGraph.nodes[n].y+100).toString()+"px";
-                this.astronot.style.left = Math.floor(drawGraph.nodes[n].x).toString()+"px";
+                this.astronot.style.top = Math.floor(drawGraph.nodes[n].y+120).toString()+"px";
+                this.astronot.style.left = Math.floor(drawGraph.nodes[n].x+((window.screen.width)/7)).toString()+"px";
                 console.log("coordonée");
                 console.log();
                 console.log(Math.floor(drawGraph.nodes[n].x).toString());

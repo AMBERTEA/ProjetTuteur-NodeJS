@@ -1,7 +1,7 @@
 var d = 0
 
 function chrono() {
-    console.log("test")
+    //console.log("test")
     document.getElementById("textMin").innerText = d
     d += 1
     setTimeout(chrono,1000)

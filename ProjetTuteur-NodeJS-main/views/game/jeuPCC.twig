@@ -8,12 +8,6 @@
     <link rel="stylesheet" href="/assets/style/styleJeuPCC.css">
 </head>
 <body>
-    <div class="timer">
-        <p id="textMin">00 : 00</p>
-    </div>
-    <input type="button" id="testCorrection"  value="correction">
-    <input type="button" id="testCorrection" onclick="window.location.reload()" value="refresh">
-
     <div class="buttonPCC">
         <form action="/PlusCourtChemin" method="post">
             <input type="hidden" id="isWin" name="time" value="">
@@ -21,10 +15,17 @@
             <input type="hidden" id="age" name="age" value="{{ age }}">
             <input type="hidden" id="difficulte" name="difficulte" value="{{ difficulte }}">
 
+
+            <input type="button" id="testCorrection"  value="correction">
+            <input type="button" id="testCorrection" onclick="window.location.reload()" value="refresh">
             <button id="buttonValidate" disabled onclick="">Valider</button>
+
+            <div class="timer">
+                <p >Score : </p>
+                <p id="textMin"></p>
+            </div>
         </form>
     </div>
-
 
     <img src="/assets/pictures/plusCourtChemin/astronaut.gif" alt="astronot" id="astronot">
 
@@ -78,21 +79,19 @@
     <img src="/assets/pictures/plusCourtChemin/planete17.png" alt="" class="planete point">
 
 
-
-
     <div class="leCanvas">
         <canvas id="myCanvas"></canvas>
     </div>
 
 
 </body>
+
 <script src="/assets/js/time.js"></script>
 <script src="/assets/js/Graph.class.js"></script>
 <script src="/assets/js/Dijkstra.js"></script>
 <script src="/assets/js/DrawGraph.js"></script>
 <script src="/assets/js/GraphADixNoeud.js"></script>
 <script src="/assets/js/JeuDuPlusCourtChemin.js"></script>
-
 <script>
     let date = new Date();
     let source, target;
