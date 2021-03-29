@@ -194,7 +194,7 @@ if(doc === "Facile") {
     let AI = graph.addNode("AI");
 
     let a = []
-    for (let index = 0; index < 45; index++) {
+    for (let index = 0; index < 100; index++) {
         a.push(random())
 
     }
@@ -202,6 +202,12 @@ if(doc === "Facile") {
     graph.addEdge(B,A, a[0]);
     graph.addEdge(B,C, a[1]);
     graph.addEdge(C,B, a[1]);
+
+    graph.addEdge(U,Z, a[68]);
+    graph.addEdge(Z,U, a[68]);
+    graph.addEdge(AA,AB, a[70]);
+    graph.addEdge(AB,AA, a[70]);
+
 
     graph.addEdge(C,D, a[2]);
     graph.addEdge(D,C, a[2]);
