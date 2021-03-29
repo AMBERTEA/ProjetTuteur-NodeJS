@@ -4,7 +4,7 @@ function chrono() {
     //console.log("test")
     document.getElementById("textMin").innerText = d
     d += 1
-    setTimeout(chrono,1000)
+    setTimeout(chrono,300)
 }
 
 chrono()

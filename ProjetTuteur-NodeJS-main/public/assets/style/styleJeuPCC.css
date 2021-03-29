@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'American Captain';
+    src: url('../fonts/American.otf') format('truetype');
+}
+
 body {
     text-align: center;
 }
@@ -34,7 +39,7 @@ body,html{
     width: 200px;
     border-radius: 5%;
     border: 3px orange solid;
-    font-family: "American Captain";
+    font-family: "American Captain", serif;
     position: absolute;
     top: 10%;
     background-color:#FFBF00;
@@ -73,12 +78,12 @@ body,html{
 }
 
 #textMin{
-    font-family: 'Segment7Standard', serif;
+    font-family: 'American Captain', serif;
     color: white;
     position: absolute;
     display: inline;
-    right: 180px;
-    top: 370px;
+    right: 46%;
+    top: 74px;
 
 }
 .recommencer{
@@ -91,7 +96,7 @@ body,html{
 button {
     width: 300px;
     height: 54px;
-    font-family: "American Captain";
+    font-family: "American Captain", serif;
     font-size: 20px;
     color: white;
     background-color: #f65c7a;
@@ -104,7 +109,7 @@ button {
 #testCorrection{
     width: 300px;
     height: 54px;
-    font-family: "American Captain";
+    font-family: "American Captain", serif;
     font-size: 20px;
     color: white;
     background-color: #f65c7a;
@@ -119,6 +124,7 @@ button {
 }
 
 .timer {
-    font-family: "American Captain";
+    font-family: "American Captain", fantasy;
+    font-size: 20px;
     color: #ffffff;
 }
