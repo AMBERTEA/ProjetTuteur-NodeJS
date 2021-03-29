@@ -255,6 +255,13 @@ h1, h2, a {
         position: relative;
     }
 
+    .imageSacADos {
+        height: 350px;
+        width: 494px;
+        border-radius: 25px;
+        box-shadow: 1px 5px #dfdfdf60;
+    }
+
     /* Footer Accueil */
     .footerAccueilAll {
         width: 100%;
