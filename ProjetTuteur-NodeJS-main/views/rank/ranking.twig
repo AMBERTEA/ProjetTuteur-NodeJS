@@ -15,14 +15,15 @@
 
 
 <form action="" method="post">
-    <label for="diffi1">Facile</label>
-    <input type="radio" id="diffi1"  name="diffi" value="Facile">
-
-    <label for="diffi2">Moyen</label>
-    <input type="radio" id="diffi2" name="diffi" value="Moyen">
-
-    <label for="diffi3">Difficile</label>
-    <input type="radio" id="diffi3"name="diffi" value="Difficile">
+    <div class="bloc">
+        <div class="select">
+            <select name="diffi">
+                <OPTION value="Facile">Facile</OPTION>
+                <OPTION value="Moyen">Moyen</OPTION>
+                <OPTION value="Difficile" >Difficile</OPTION>
+            </select>
+        </div>
+    </div>
 
     <input type="hidden" name="hiddenGame" value="jeu1">
 
@@ -33,16 +34,15 @@
 <div class="formJeu2">
 
 <form action="" method="post">
-    <label for="diffi1">Facile</label>
-    <input type="radio" id="diffi1"  name="diffi" value="Facile">
-
-    <label for="diffi1">Moyen</label>
-    <input type="radio" id="diffi2" name="diffi" value="Moyen">
-
-    <label for="diffi1">Difficile</label>
-    <input type="radio" id="diffi3"name="diffi" value="Difficile">
-
-    <input type="hidden" name="hiddenGame" value="jeu2">
+    <div class="bloc">
+        <div class="select">
+            <select name="diffi">
+                <OPTION value="Facile">Facile</OPTION>
+                <OPTION value="Moyen">Moyen</OPTION>
+                <OPTION value="Difficile" >Difficile</OPTION>
+            </select>
+        </div>
+    </div>
 
     <button>Afficher</button>
 </form>

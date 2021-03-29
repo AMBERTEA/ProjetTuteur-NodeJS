@@ -29,6 +29,30 @@ app.get('/ExplicationSacADos', (req, res) => {
     res.render('CarrouselSacADos.twig')
 })
 
+app.post('/ExplicationSacADos',((req, res) => {
+    let preparedStatement = "INSERT INTO joueursacados(nom,age,score,difficulte) values ('" + req.body.nom + "','" + req.body.age + "',0,'" + req.body.difficulte + "');"
+    connection.query(preparedStatement,(err,list) =>{
+        if(!err){
+            let prepState = `SELECT * from joueursacados where nom = "${req.body.nom}" and age = ${req.body.age} `
+            connection.query(prepState,(err,result) =>{
+                if(!err){
+                    res.render('VueSacADos.twig',{
+                        nom: req.body.nom,
+                        time: req.body.time,
+                        age: req.body.age,
+                        difficulte: req.body.difficulte
+                    })
+                }else{
+                    res.send(err)
+                }
+
+            })
+        }else{
+            res.send(err)
+        }
+    })
+}))
+
 app.get('/JeuPlusCourtChemin', ((req, res) => {
     res.render('JeuPlusCourtChemin.twig')
 }))
@@ -66,7 +90,7 @@ app.post('/Classement', (req, res) => {
         let preparedStatement = `SELECT DISTINCT nom,age,score FROM joueur where difficulte = "${req.body.diffi}" order by score asc`
         connection.query(preparedStatement, (err, result) => {
             if (!err) {
-                console.log(result)
+                console.log(req.body.diffi)
                 res.render('Classement.twig', {joueurs: result, donneePCC: true})
             } else {
                 res.send(err)
@@ -74,8 +98,15 @@ app.post('/Classement', (req, res) => {
         })
 
     } else {
-        //let preparedStatement
-        console.log("pa fini")
+        let preparedStatement = `SELECT DISTINCT nom,age,score FROM joueursacados where difficulte = "${req.body.diffi}" order by score asc`
+        connection.query(preparedStatement, (err, result) => {
+            if (!err) {
+                console.log(req.body.diffi)
+                res.render('Classement.twig', {joueurs: result, donneePCC: true})
+            } else {
+                res.send(err)
+            }
+        })
 
     }
 })
