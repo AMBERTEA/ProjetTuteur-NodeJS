@@ -151,6 +151,16 @@ app.get('/JeuSacADos', (req, res) => {
     res.render('VueSacADos.twig')
 })
 
+app.post('/JeuSacADos',(req, res) => {
+    connection.query(`UPDATE joueursacados set score="${req.body.time}" where nom="${req.body.nom}" and age =${req.body.age}`, (err, list) => {
+        if (!err) {
+            res.redirect("/")
+        } else {
+            res.send(err)
+        }
+    })
+})
+
 
 app.get('/testDate', (req, res) => {
     res.render('TestDate.twig', {})
