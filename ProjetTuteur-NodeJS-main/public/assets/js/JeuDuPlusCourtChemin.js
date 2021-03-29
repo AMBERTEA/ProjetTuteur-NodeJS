@@ -1,9 +1,96 @@
 var doc = document.getElementById("difficulte").value
-console.log(doc)
 let graph = new Graph();
-var c
+var c;
 
 if(doc === "Facile") {
+    let A = graph.addNode("A");
+    let B = graph.addNode("B");
+    let C = graph.addNode("C");
+
+    let D = graph.addNode("D");
+    let E = graph.addNode("E");
+    let F = graph.addNode("F");
+
+    let G = graph.addNode("G");
+    let H = graph.addNode("H");
+    let I = graph.addNode("I");
+
+    let J = graph.addNode("J");
+    let K = graph.addNode("K");
+
+    let a = []
+
+    for (let index = 0; index < 20; index++) {
+        a.push(Math.floor(Math.random()*8)+2)
+    }
+
+    graph.addEdge(A,B, a[0]);
+    graph.addEdge(B,A, a[0]);
+
+    graph.addEdge(A,E, a[1]);
+    graph.addEdge(E,A, a[1]);
+
+    graph.addEdge(A,H, a[2]);
+    graph.addEdge(H,A, a[2]);
+
+    graph.addEdge(C,B, a[3]);
+    graph.addEdge(B,C, a[3]);
+
+    graph.addEdge(E,C, a[4]);
+    graph.addEdge(C,E, a[4]);
+
+    graph.addEdge(F,E, a[5]);
+    graph.addEdge(E,F, a[5]);
+
+    graph.addEdge(I,E, a[14]);
+    graph.addEdge(E,I, a[14]);
+
+    graph.addEdge(F,G, a[6]);
+    graph.addEdge(G,F, a[6]);
+
+    graph.addEdge(C,D, a[7]);
+    graph.addEdge(D,C, a[7]);
+
+    graph.addEdge(D,F, a[8]);
+    graph.addEdge(F,D, a[8]);
+
+    graph.addEdge(F,J, a[9]);
+    graph.addEdge(J,F, a[9]);
+
+    graph.addEdge(D,K, a[15]);
+    graph.addEdge(K,D, a[15]);
+
+    graph.addEdge(G,K, a[16]);
+    graph.addEdge(K,G, a[16]);
+
+    graph.addEdge(H,I, a[10]);
+    graph.addEdge(I,H, a[10]);
+
+    graph.addEdge(J,K, a[17]);
+    graph.addEdge(K,J, a[17]);
+
+    graph.addEdge(J,I, a[13]);
+    graph.addEdge(I,J, a[13]);
+
+    graph.print();
+
+    c = [
+        [69,392],
+
+        [300,85],
+        [600,85],
+        [900,85],
+
+        [300,392],
+        [600,392],
+        [900,392],
+
+        [300,683],
+        [600,683],
+        [900,683],
+
+        [1200,392]
+    ]
 
 } else if (doc === "Moyen") {
     let A = graph.addNode("A");
@@ -27,10 +114,11 @@ if(doc === "Facile") {
     let S = graph.addNode("S");
 
     let a = []
-    for (let index = 0; index < 45; index++) {
-        a.push(random())
 
+    for (let index = 0; index < 45; index++) {
+        a.push(Math.floor(Math.random()*15)+5)
     }
+
     graph.addEdge(A,B, a[0]);
     graph.addEdge(A,D, a[1]);
     graph.addEdge(A,E, a[2]);
@@ -60,7 +148,7 @@ if(doc === "Facile") {
     graph.addEdge(D,H, a[41]);
 
     graph.addEdge(I,H, a[14]);
-    graph.addEdge(I,K, a[15]);
+    graph.addEdge(I,S, a[15]);
     graph.addEdge(I,J, a[16]);
     graph.addEdge(I,C, a[7]);
     graph.addEdge(I,D, a[12]);
@@ -70,7 +158,7 @@ if(doc === "Facile") {
     graph.addEdge(G,E, a[9]);
     graph.addEdge(G,L, a[38]);
 
-    graph.addEdge(H,K, a[19]);
+    graph.addEdge(H,S, a[19]);
     graph.addEdge(H,L, a[20]);
     graph.addEdge(H,A, a[4]);
     graph.addEdge(H,I, a[14]);
@@ -89,17 +177,17 @@ if(doc === "Facile") {
     graph.addEdge(N,P, a[37]);
 
     graph.addEdge(L,M, a[39]);
-    graph.addEdge(L,K, a[22]);
+    graph.addEdge(L,S, a[22]);
     graph.addEdge(L,O, a[23]);
     graph.addEdge(L,N, a[24]);
     graph.addEdge(L,H, a[20]);
     graph.addEdge(L,G, a[38]);
 
-    graph.addEdge(K,Q, a[25]);
-    graph.addEdge(K,O, a[26]);
-    graph.addEdge(K,I, a[15]);
-    graph.addEdge(K,H, a[19]);
-    graph.addEdge(K,L, a[22]);
+    graph.addEdge(S,Q, a[25]);
+    graph.addEdge(S,O, a[26]);
+    graph.addEdge(S,I, a[15]);
+    graph.addEdge(S,H, a[19]);
+    graph.addEdge(S,L, a[22]);
 
     graph.addEdge(J,R, a[27]);
     graph.addEdge(J,Q, a[28]);
@@ -107,30 +195,30 @@ if(doc === "Facile") {
     graph.addEdge(J,C, a[36]);
 
     graph.addEdge(Q,R, a[29]);
-    graph.addEdge(Q,S, a[30]);
+    graph.addEdge(Q,K, a[30]);
     graph.addEdge(Q,O, a[31]);
-    graph.addEdge(Q,K, a[25]);
+    graph.addEdge(Q,S, a[25]);
     graph.addEdge(Q,J, a[28]);
 
-    graph.addEdge(R,S, a[32]);
+    graph.addEdge(R,K, a[32]);
     graph.addEdge(R,J, a[27]);
     graph.addEdge(R,Q, a[29]);
 
-    graph.addEdge(S,R, a[32]);
-    graph.addEdge(S,O, a[33]);
-    graph.addEdge(S,Q, a[30]);
+    graph.addEdge(K,R, a[32]);
+    graph.addEdge(K,O, a[33]);
+    graph.addEdge(K,Q, a[30]);
 
-    graph.addEdge(O,S, a[33]);
-    graph.addEdge(O,K, a[26]);
+    graph.addEdge(O,K, a[33]);
+    graph.addEdge(O,S, a[26]);
     graph.addEdge(O,P, a[34]);
     graph.addEdge(O,N, a[35]);
     graph.addEdge(O,L, a[23]);
     graph.addEdge(O,Q, a[31]);
 
-    graph.addEdge(P,S, a[36]);
+    graph.addEdge(P,K, a[44]);
+    graph.addEdge(K,P, a[44]);
     graph.addEdge(P,O, a[34]);
     graph.addEdge(P,N, a[37]);
-
 
     graph.print();
 
@@ -145,7 +233,7 @@ if(doc === "Facile") {
         [468,442],
         [550,192],
         [688,68],
-        [768,304],
+        [1122,386],
         [710,556],
         [591,715],
         [885,683],
@@ -153,10 +241,9 @@ if(doc === "Facile") {
         [1067,625],
         [896,170],
         [1082,90],
-        [1122,386]
+        [768,304]
     ]
-} else if( doc == "Difficile") {
-
+} else {
     let A = graph.addNode("A");
     let B = graph.addNode("B");
     let C = graph.addNode("C");
@@ -195,12 +282,12 @@ if(doc === "Facile") {
     let AI = graph.addNode("AI");
 
     let a = []
-    for (let index = 0; index < 100; index++) {
-        a.push(random())
 
+    for (let index = 0; index < 100; index++) {
+        a.push(Math.floor(Math.random()*80)+20)
     }
-    graph.addEdge(A,B, a[0]);
-    graph.addEdge(B,A, a[0]);
+    graph.addEdge(L,B, a[0]);
+    graph.addEdge(B,L, a[0]);
     graph.addEdge(B,C, a[1]);
     graph.addEdge(C,B, a[1]);
 
@@ -223,8 +310,8 @@ if(doc === "Facile") {
 
     graph.addEdge(B,G, a[6]);
     graph.addEdge(G,B, a[6]);
-    graph.addEdge(A,G, a[7]);
-    graph.addEdge(G,A, a[7]);
+    graph.addEdge(L,G, a[7]);
+    graph.addEdge(G,L, a[7]);
 
     graph.addEdge(B,H, a[8]);
     graph.addEdge(H,B, a[8]);
@@ -233,17 +320,17 @@ if(doc === "Facile") {
 
     graph.addEdge(H,C, a[10]);
     graph.addEdge(C,H, a[10]);
-    graph.addEdge(L,G, a[11]);
-    graph.addEdge(G,L, a[11]);
+    graph.addEdge(A,G, a[11]);
+    graph.addEdge(G,A, a[11]);
 
 
     graph.addEdge(G,M, a[12]);
     graph.addEdge(M,G, a[12]);
-    graph.addEdge(L,S, a[13]);
-    graph.addEdge(S,L, a[13]);
+    graph.addEdge(A,S, a[13]);
+    graph.addEdge(S,A, a[13]);
 
-    graph.addEdge(L,AC, a[14]);
-    graph.addEdge(AC,L, a[14]);
+    graph.addEdge(A,AC, a[14]);
+    graph.addEdge(AC,A, a[14]);
     graph.addEdge(AC,S, a[15]);
     graph.addEdge(S,AC, a[15]);
 
@@ -297,28 +384,28 @@ if(doc === "Facile") {
 
     graph.addEdge(AH,AB, a[34]);
     graph.addEdge(AB,AH, a[34]);
-    graph.addEdge(AI,X, a[35]);
-    graph.addEdge(X,AI, a[35]);
+    graph.addEdge(AI,K, a[35]);
+    graph.addEdge(K,AI, a[35]);
 
 
-    graph.addEdge(R,X, a[36]);
-    graph.addEdge(X,R, a[36]);
-    graph.addEdge(AB,X, a[37]);
-    graph.addEdge(X,AB, a[37]);
+    graph.addEdge(R,K, a[36]);
+    graph.addEdge(K,R, a[36]);
+    graph.addEdge(AB,K, a[37]);
+    graph.addEdge(K,AB, a[37]);
 
     graph.addEdge(F,R, a[38]);
     graph.addEdge(R,F, a[38]);
-    graph.addEdge(F,K, a[39]);
-    graph.addEdge(K,F, a[39]);
+    graph.addEdge(F,X, a[39]);
+    graph.addEdge(X,F, a[39]);
 
-    graph.addEdge(E,K, a[40]);
-    graph.addEdge(K,E, a[40]);
+    graph.addEdge(E,X, a[40]);
+    graph.addEdge(X,E, a[40]);
     graph.addEdge(D,J, a[41]);
     graph.addEdge(J,D, a[41]);
 
 
-    graph.addEdge(J,K, a[42]);
-    graph.addEdge(K,J, a[42]);
+    graph.addEdge(J,X, a[42]);
+    graph.addEdge(X,J, a[42]);
     graph.addEdge(C,I, a[43]);
     graph.addEdge(I,C, a[43]);
 
@@ -333,8 +420,8 @@ if(doc === "Facile") {
     graph.addEdge(Q,J, a[47]);
 
 
-    graph.addEdge(Q,K, a[48]);
-    graph.addEdge(K,Q, a[48]);
+    graph.addEdge(Q,X, a[48]);
+    graph.addEdge(X,Q, a[48]);
     graph.addEdge(P,Q, a[49]);
     graph.addEdge(Q,P, a[49]);
 
@@ -351,8 +438,8 @@ if(doc === "Facile") {
 
     graph.addEdge(W,R, a[54]);
     graph.addEdge(R,W, a[54]);
-    graph.addEdge(K,R, a[55]);
-    graph.addEdge(R,K, a[55]);
+    graph.addEdge(X,R, a[55]);
+    graph.addEdge(R,X, a[55]);
 
     graph.addEdge(W,AB, a[56]);
     graph.addEdge(AB,W, a[56]);
@@ -392,39 +479,50 @@ if(doc === "Facile") {
     graph.print();
 
     c = [
-        [90, 95],
+        [63, 387],
         [303, 64],
         [460, 110],
+
         [613, 47],
         [858, 64],
         [1087, 97],
+
         [173, 230],
         [334, 213],
         [584, 190],
+
         [738, 162],
-        [983, 195],
-        [63, 387],
+        [1159, 384],
+        [90, 95],
+
         [205, 416],
         [334, 376],
         [474, 322],
+
         [667, 306],
         [849, 286],
         [1101, 276],
+
         [171, 559],
         [334, 565],
         [575, 439],
+
         [772, 412],
         [961, 400],
-        [1159, 384],
+        [983, 195],
+
         [498, 575],
         [678, 533],
         [871, 559],
+
         [1036, 539],
         [63, 650],
         [251, 705],
+
         [411, 705],
         [629, 676],
         [787, 717],
+
         [977, 676],
         [1159, 621]
     ]

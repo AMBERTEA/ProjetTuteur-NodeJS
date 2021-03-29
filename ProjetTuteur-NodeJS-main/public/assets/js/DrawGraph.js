@@ -192,7 +192,7 @@ class DrawGraph {
         this.canvasCtx.beginPath();
 
 
-        this.canvasCtx.drawImage(this.images[n],x - (this.images[n].width/20),y - (this.images[n].height/20),this.images[n].width/10 ,this.images[n].height/10)
+        this.canvasCtx.drawImage(this.images[n],x - (this.images[n].width/25),y - (this.images[n].height/25),this.images[n].width/12.5 ,this.images[n].height/12.5)
 
    
         this.canvasCtx.fillStyle = "rgb(" + color.r + "," + color.g + "," + color.b + ")";
