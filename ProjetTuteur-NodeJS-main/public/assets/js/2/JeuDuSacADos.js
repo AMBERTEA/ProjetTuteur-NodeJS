@@ -3,13 +3,15 @@ let maxWeight;
 let sacADosSol;
 let sacADosPlayer;
 
-let lampe;
-let chocolat;
-let corde;
-let couteau;
-let telephone;
-
-let monRandom = Math.floor(Math.random());
+let spagheti;
+let pene;
+let frite;
+let soupe;
+let steak;
+let saladeDeTomates;
+let saladeDeCrevette;
+let coteDePorc;
+let coteDeMouton;
 
 let menu = new Container();
 
@@ -21,19 +23,19 @@ if (doc === "Facile") {
     sacADosSol = new Sac(maxWeight);
     sacADosPlayer = new Sac(maxWeight);
 
-    lampe = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"lampe");
-    chocolat = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"chocolat");
-    corde = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"corde");
-    couteau = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"couteau");
-    telephone = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"telephone");
+    spagheti = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"spagheti");
+    pene = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"pene");
+    frite = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"frite");
+    soupe = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"soupe");
+    steak = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"steak");
 
     menu = new Container();
 
-    menu.add(lampe,Math.floor(Math.random()*3)+1);
-    menu.add(chocolat,Math.floor(Math.random()*3)+1);
-    menu.add(corde,Math.floor(Math.random()*3)+1);
-    menu.add(couteau,Math.floor(Math.random()*3)+1);
-    menu.add(telephone,Math.floor(Math.random()*3)+1);
+    menu.add(spagheti,Math.floor(Math.random()*3)+1);
+    menu.add(pene,Math.floor(Math.random()*3)+1);
+    menu.add(frite,Math.floor(Math.random()*3)+1);
+    menu.add(soupe,Math.floor(Math.random()*3)+1);
+    menu.add(steak,Math.floor(Math.random()*3)+1);
 } else if (doc === "Moyen") {
 
 } else {
@@ -70,11 +72,10 @@ function createButton(menu){
         });
     }
 }
+
 document.getElementById("sizeAndValue").innerHTML = "Poids: "+sacADosPlayer.getSacWeight()+"/"+sacADosPlayer.getSacSize()+" Valeur: "+sacADosPlayer.getSacValue();
 
 createButton(menu);
-
-let deleteObject;
 
 resolution(menu,sacADosSol);
 
