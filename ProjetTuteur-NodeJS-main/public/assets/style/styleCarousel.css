@@ -55,9 +55,10 @@ body, html {
 }
 
 .carousel-item {
-    text-align: center;
+
     padding: 30px 100px;
 }
+
 
 /*Page 1*/
 .imgAstronauteLecture {
@@ -108,3 +109,59 @@ body, html {
     text-transform: uppercase;
     font-family: 'American Captain';
 }
+
+
+
+/*Réinitilaisation de la liste déroulante*/
+select {
+    appearance: none;
+    outline: 0;
+    border: 0 !important;
+    background: #F9F9F9;
+    background-image: none;
+    box-shadow: none;
+    font-size: 1.2em;
+}
+
+
+/* Mise en forme de la div .select*/
+.select {
+    position: relative;
+    width: 200px;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #CED4DA;
+}
+
+
+/* Mise en forme de la balise select*/
+select {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding-left: 15px;
+    color: #555555;
+    cursor: pointer;
+}
+
+
+/* Mise en place de la flèche */
+.select::after {
+    content: '\276F';
+    position: absolute;
+    top: 20%;
+    right: 0;
+    padding: 0 15px;
+    background: white;
+    pointer-events: none;
+    transform: rotate(90deg);
+    font-size: 1.5em;
+    background: #F9F9F9;
+}
+
+
+.select:hover::after {
+    color: #b61b4d;
+}
+
