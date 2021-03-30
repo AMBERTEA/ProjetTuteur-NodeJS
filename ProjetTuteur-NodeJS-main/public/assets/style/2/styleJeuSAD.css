@@ -28,6 +28,13 @@ body,html{
     background-color: #ffffff;
     text-align: center;
 }
+.menuRestaurant > div{
+    border: black solid 1px;
+    margin: 10px;
+}
+.menuRestaurant > div:hover{
+    border: black solid 3px;
+}
 
 .imgFondSAD {
     position: absolute;
@@ -45,10 +52,13 @@ body,html{
     display: none;
 }
 
+
 .pateCarbo {
     width: 128px;
     height: 75px;
 }
+
+
 
 .pateBolo {
     width: 161px;

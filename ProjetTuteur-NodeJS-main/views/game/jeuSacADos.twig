@@ -19,27 +19,12 @@
         <div class="container-fluid">
             <div class="row customMenu">
                 <div id="menuResto" class="menuRestaurant col-6">
-                    <div class="row">
-                        <div class="col-4">
 
-                        </div>
-                        <div class="col-3">
-
-                        </div>
-                        <div class="col-1">
-
-                        </div>
-                        <div class="col-1">
-
-                        </div>
-                        <div class="col-2">
-
-                        </div>
-                    </div>
                 </div>
                 <div class="col-1"></div>
                 <div class="recuRestaurant col-5">
                     <button id="buttonValidate">Valider</button>
+                    <div id="boxPiece" class="box"></div>
                 </div>
             </div>
         </div>
@@ -79,14 +64,81 @@
 <script src="/assets/js/2/JeuDuSacADos.js"></script>
 
 <script>
+
+
+
+
     console.log(menu.getContainer())
     let doc2 = document.getElementById("menuResto")
 
+
     for (let i in menu.getContainer()){
-        let btn = document.createElement("img")
-        btn.src = 'assets/pictures/sacADos/'+i+'.png'
-        btn.setAttribute("class",i);
-        doc2.appendChild(btn)
+
+        console.log(menu.getContainer()[i].nbr)
+
+        //a mettre dans la divQuantite
+        let qnt = document.createElement("p")
+        qnt.innerText = "Quantite: " +menu.getContainer()[i].nbr
+
+        //a mettre a l'interieur dans la divImage
+        let img = document.createElement("img")
+        img.src = 'assets/pictures/sacADos/'+i+'.png'
+        img.setAttribute("class",i)
+        img.setAttribute("id",i+"ImageToPush")
+
+        //a mettre a l'interieur de divValeur
+        let valeur = document.createElement("p")
+        valeur.innerText ="Valeur: " + menu.getContainer()[i].object.getWeight()
+
+        //a mettre a l'interieur de divPrix
+        let prix = document.createElement("p")
+        prix.innerText = "Prix: " + menu.getContainer()[i].object.getValue()
+
+
+        //difinition de la div row
+        let divRow = document.createElement("div")
+        divRow.setAttribute("class","row "+ i+"Ligne")
+
+
+        //postiotionnement de la quantité
+        let divQuantite = document.createElement("div")
+        divQuantite.setAttribute("class","col-3")
+        divQuantite.appendChild(qnt)
+
+        //positionnement de l'image
+        let divImage = document.createElement("div")
+        divImage.setAttribute("class","col-3")
+
+        divImage.appendChild(img)
+
+        //positionnement de la valeur
+        let divValeur = document.createElement("div")
+        divValeur.setAttribute("class","col-3")
+        divValeur.appendChild(valeur)
+
+        //postiotionnement du prix
+        let divPrix = document.createElement("div")
+        divPrix.setAttribute("class","col-3")
+        divPrix.appendChild(prix)
+
+
+
+
+        divRow.appendChild(divQuantite)
+        divRow.appendChild(divImage)
+        divRow.appendChild(divValeur)
+        divRow.appendChild(divPrix)
+
+        doc2.appendChild(divRow)
+
+
+        //ajout d'un event listener
+        divRow.addEventListener("click", () => {
+            let ressource = document.getElementById(i+"ImageToPush").src
+            console.log(ressource)
+            document.getElementById("boxPiece").innerHTML += '<img  src="assets/pictures/sacADos/' + i + '.png" alt="image"/>'
+        })
+
     }
 </script>
 </html>
