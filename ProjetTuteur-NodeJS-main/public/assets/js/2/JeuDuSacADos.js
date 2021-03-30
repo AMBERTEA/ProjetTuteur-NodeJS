@@ -59,15 +59,17 @@ function createButton(menu){
         newButton.setAttribute("id",name);
         newButton.setAttribute("class","btn btn-primary");
 
-        const currentDiv = document.getElementById("button");
+        const currentDiv = document.getElementById(name);
 
         document.body.insertBefore(newButton,currentDiv);
 
-        document.getElementById(name).innerHTML = name+": "+item.nbr+"\nPoids: "+obj.getWeight()+"\nValeur: "+obj.getValue();
+        // document.getElementById(name).innerHTML = name+": "+item.nbr+"\nPoids: "+obj.getWeight()+"\nValeur: "+obj.getValue();
+        document.getElementById(name).innerHTML = "Ajouter";
         document.getElementById(name).addEventListener('click', function(){
             if (sacADosPlayer.addInSacPlayer(obj) == 0)
                 menu.remove(name);
-            document.getElementById(name).innerHTML = name+": "+item.nbr+"\nPoids: "+obj.getWeight()+"\nValeur: "+obj.getValue();
+            // document.getElementById(name).innerHTML = name+": "+item.nbr+"\nPoids: "+obj.getWeight()+"\nValeur: "+obj.getValue();
+            document.getElementById(name).innerHTML = "Ajouter";
             document.getElementById("sizeAndValue").innerHTML = "Poids: "+sacADosPlayer.getSacWeight()+"/"+sacADosPlayer.getSacSize()+"\nValeur: "+sacADosPlayer.getSacValue();
             if(item.nbr<=0){
                 document.getElementById(name).disabled = true;

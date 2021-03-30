@@ -1,0 +1,37 @@
+.box{
+    left: 50%;
+    height: 200px;
+    width: 200px;
+    color: #ff0000;
+    border: 1px #000000 solid;
+    top: 50%;
+
+}
+
+.boxSol{
+    left: 50%;
+    height: 200px;
+    width: 200px;
+    color: #ff0000;
+    border: 1px #000000 solid;
+    top: 50%;
+    display: none;
+}
+
+body,html{
+    padding: 0;
+    margin: 0;
+    overflow: hidden !important;
+}
+
+.menuRestaurant, .recuRestaurant {
+    background-color: #ffffff;
+}
+
+.imgFondSAD {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 100%;
+    z-index: -100;
+}
