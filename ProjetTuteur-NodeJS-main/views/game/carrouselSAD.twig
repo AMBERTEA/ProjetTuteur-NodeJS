@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Fête de la science !</title>
+    <link href="/assets/style/bootstrap.css" rel="stylesheet">
+    <link href="/assets/style/styleCarouselSacADos.css" rel="stylesheet">
+</head>
+
+<body>
+<div>
+    <img class="imgFondSAD" src="/assets/pictures/sacADos/sacADosFond.jpg" alt="Le fond...">
+</div>
+
+<div id="myCarousel" class="carousel slide styleCarousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <h1 class="titreSAD">Problème du Sac a dos</h1>
+            <img class="imgAstronauteSandwich" src="/assets/pictures/sacADos/sacADos.jpg"
+                 alt="Ho il mange !">
+            <h2>Description du problème</h2>
+            <p class="paragraphes">
+                Le problème du sac à dos est un problème classique d'optimisation.<br>
+                Le but est de remplir un sac avec des objets qui ont une certaine valeur mais aussi un certain poids.
+                Vous devez donc emporter le plus d'objet de valeur avec vous
+                tout en faisant attention à ne pas dépasser le poids limite du sac.
+            </p>
+        </div>
+        <div class="carousel-item">
+            <h2 class="lui">Description de l'algorithme</h2>
+            <p class="paragraphes">
+                Il existe plusieurs manières de trouver une solution optimale pour ce problème.
+                Nous nous sommes basé sur la programmatiion dynamique.
+                C'est une méthode qui consiste en effet à découper chaque problème en plus petits problèmes
+                puis de rassembler les solutions trouvées. Cet algorithme est très utilisé dans
+                l'industrie du transport comme par exemple pour connaitre la meilleur manière de remplir un avion
+                de ligne ou un camion.
+            </p>
+        </div>
+        <div class="carousel-item">
+            <h2>Règles</h2>
+            <p class="paragraphes">
+                Roger notre spationaute se retrouve maintenant devant la carte d'un restaurant, et a très faim
+                mais il ne veut pas dépenser trop d'argent car le voyage en fusée a coûté cher...
+                Vous devez donc l'aider à choisir les plats qui lui permettront d'avoir la meilleure valeur nutritive
+                tout en respectant son budget.
+                Lorsque vous aurez choisi les plats pour Roger en cliquant sur le bouton correspondant, pensez à
+                appuyer sur le bouton valider.
+                Notre algorithme vous dira si vous avez réussi ou non. Bonne chance !
+            </p>
+            <div>
+                <img class="interrogationCarrousel" src="/assets/pictures/sacADos/interroger.png" alt="Mais que prendre ?!">
+            </div>
+            <div class="rogerPlat row">
+                <div class="col-6">
+                    <img class="imageRogerCarrousel" src="/assets/pictures/sacADos/astronautSousoupe.png" alt="LA SOUSOUPEEEEEE !!!!!!!!">
+                </div>
+                <div class="col-6">
+                    <img class="imagePlatCarrousel" src="/assets/pictures/sacADos/plats.png" alt="DAMMMMN y'a à manger !">
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="imgAstronauteSandwich" src="/assets/pictures/sacADos/astronautSandwich.png" alt="Ho il mange !">
+            <h2>C'est parti !</h2>
+            <div class="formulaireCarrousel">
+                <form action=""  method="post">
+                    <input class="inputFormulaire" pattern="^[a-zA-Z0-9]{4,10}$" type="text" name="nom" placeholder="Entrez votre nom">
+                    <br>
+
+                    <input class="inputFormulaire" pattern="[0-9]+" type="text" name="age" placeholder="Entrez votre age">
+                    <br>
+
+                    <input type="hidden" name="time">
+                    <div class="bloc">
+                        <div class="select">
+                            <select name="difficulte">
+                                <OPTION>Facile</OPTION>
+                                <OPTION>Moyen</OPTION>
+                                <OPTION>Difficile</OPTION>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="boutonJouer">Jouer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <img class="carousel-control-prev imgBouton boutonGauche" data-bs-target="#myCarousel" data-bs-slide="prev"
+         src="/assets/pictures/sacADos/boutonGauche.png" alt="Bouton gauche !">
+    <img class="carousel-control-next imgBouton boutonDroite" data-bs-target="#myCarousel" data-bs-slide="next"
+         src="/assets/pictures/sacADos/boutonDroite.png" alt="Bouton droit !">
+</div>
+
+<script src="/assets/js/bootstrap.js"></script>
+
+</body>
+</html>

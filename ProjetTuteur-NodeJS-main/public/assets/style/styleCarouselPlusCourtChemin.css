@@ -137,6 +137,8 @@ body, html {
 h2 {
     font-size: 30px;
     text-align: center;
+    text-transform: uppercase;
+    font-family: "American Captain", serif;
 }
 
 /*Réinitilaisation de la liste déroulante*/
@@ -177,7 +179,7 @@ select {
 .select::after {
     content: '\276F';
     position: absolute;
-    top: 20%;
+    top: 7%;
     right: 0;
     padding: 0 15px;
     background: white;
