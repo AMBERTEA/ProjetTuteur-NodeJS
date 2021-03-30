@@ -45,24 +45,47 @@ body,html{
     display: none;
 }
 
-.pateCarbo{
-    width: 100px;
-    height: 100px;
+.pateCarbo {
+    width: 128px;
+    height: 75px;
 }
 
-.pateBolo{
-    width: 100px;
-    height: 100px;
+.pateBolo {
+    width: 161px;
+    height: 75px;
 }
-.frite{
-    width: 100px;
-    height: 100px;
+
+.frite {
+    width: 136px;
+    height: 75px;
 }
-.sousoupe{
-    width: 100px;
-    height: 100px;
+
+.sousoupe {
+    width: 118px;
+    height: 75px;
 }
-.steak{
-    width: 100px;
-    height: 100px;
+
+.steak {
+    width: 152px;
+    height: 75px;
+}
+
+.saladeMixte {
+    width: 140px;
+    height: 75px;
+}
+
+.saladeCrevette {
+    width: 141px;
+    height: 75px;
+}
+
+.porc {
+    width: 166px;
+    height: 75px;
+}
+
+.mouton {
+    width: 121px;
+    height: 75px;
 }

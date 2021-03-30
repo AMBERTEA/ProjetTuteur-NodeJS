@@ -31,6 +31,10 @@ if (doc === "Facile") {
     frite = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"frite");
     sousoupe = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"sousoupe");
     steak = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"steak");
+    saladeMixte = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"saladeMixte");
+    saladeCrevette = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"saladeCrevette");
+    porc = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"porc");
+    mouton = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"mouton");
 
     menu = new Container();
 
@@ -39,6 +43,11 @@ if (doc === "Facile") {
     menu.add(frite,Math.floor(Math.random()*3)+1);
     menu.add(sousoupe,Math.floor(Math.random()*3)+1);
     menu.add(steak,Math.floor(Math.random()*3)+1);
+    menu.add(saladeMixte,Math.floor(Math.random()*3)+1);
+    menu.add(saladeCrevette,Math.floor(Math.random()*3)+1);
+    menu.add(porc,Math.floor(Math.random()*3)+1);
+    menu.add(mouton,Math.floor(Math.random()*3)+1);
+
     menu.length = 5
 } else if (doc === "Moyen") {
 
