@@ -26,6 +26,7 @@ body,html{
 
 .menuRestaurant, .recuRestaurant {
     background-color: #ffffff;
+    text-align: center;
 }
 
 .imgFondSAD {
@@ -39,7 +40,6 @@ body,html{
 .customMenu{
     margin-top: 80px;
 }
-
 
 .hide{
     display: none;
