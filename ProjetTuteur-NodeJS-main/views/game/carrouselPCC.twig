@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Fête de la science !</title>
     <link href="/assets/style/bootstrap.css" rel="stylesheet">
-    <link href="/assets/style/styleCarousel.css" rel="stylesheet">
+    <link href="/assets/style/styleCarouselPlusCourtChemin.css" rel="stylesheet">
 </head>
 
 <body>
@@ -18,57 +18,82 @@
                 <h1 class="titrePCC">Problème du plus court chemin</h1>
                 <img class="imgAstronauteLecture" src="/assets/pictures/plusCourtChemin/astronauteLecture.png"
                      alt="Ho il lit !">
-                <h2>Explication Algorithme</h2>
+                <h2>Description du problème</h2>
                 <p class="paragraphes">
-                    Il s’agit d’un problème très commun dans le monde l’informatique : comment se rendre d’un point A à un point B le plus vite possible en empruntant le chemin le plus court. C’est habituellement la mission des GPS mais ici c’est la vôtre. Notre petit spationaute s’est perdu dans la galaxie, alors ramenez-le sur Terre !
+                    Il s’agit d’un problème très commun dans le monde l’informatique : comment se rendre d’un point A à
+                    un point B le plus vite possible en empruntant le chemin le plus court. C’est habituellement la
+                    mission des GPS mais ici c’est la vôtre. Notre petit spationaute s’est perdu dans la galaxie, alors
+                    ramenez-le sur Terre !
                 </p>
             </div>
             <div class="carousel-item">
-                <h2>Utilisations de l'algorithme</h2>
+                <h2>Description de l'algorithme</h2>
                 <p class="paragraphes">
                     L’algorithme de Dijkstra sert à résoudre le problème du plus court chemin. Il permet, par exemple,
                     de déterminer un plus court chemin pour se rendre d'une ville à une autre connaissant le réseau
                     routier d'une région.
                     Plus précisément, il calcule les plus courts chemins à partir d'une source vers tous les autres
                     sommets d’un graphe mais on peut aussi l'utiliser pour calculer le plus court chemin entre un sommet
-                    de départ et un sommet d'arrivée. C’est ce que fait par exemple Google
+                    de départ et un sommet d'arrivée. C’est ce que fait par exemple Google Maps.
+                </p>
+                <h2>Mais Dijkstra, qui est-ce ?!</h2>
+                <p class="paragraphes">
+                    Edsger Wybe Dijkstra, né à Rotterdam le 11 mai 1930 et mort à Nuenen le 6 août 2002, est un
+                    mathématicien et informaticien néerlandais du XXe siècle. Il reçoit en 1972 le prix Turing pour ses
+                    contributions sur la science et l’art des langages de programmation et au langage Algol.
                 </p>
             </div>
             <div class="carousel-item">
                 <h2>Règles</h2>
                 <p class="paragraphes">
-                    Roger notre spationaute s’est perdu dans la galaxie et son vaisseau n’a plus beaucoup d’énergie. Il doit rentrer sur Terre au plus vite mais pour être sûr qu’il atteigne son objectif il doit emprunter le chemin le plus court, sinon il n’aura pas assez de carburant. A vous de dessiner le chemin que Roger va emprunter du point de départ à son point d’arriver en cliquant sur une planète adjacente à la sienne.
+                    Roger notre spationaute s’est perdu dans la galaxie et son vaisseau n’a plus beaucoup d’énergie. Il
+                    doit rentrer sur Terre au plus vite mais pour être sûr qu’il atteigne son objectif il doit emprunter
+                    le chemin le plus court, sinon il n’aura pas assez d'oxygène. À vous de dessiner le chemin que
+                    Roger va emprunter du point de départ à son point d’arrivée en cliquant sur une planète adjacente à
+                    la sienne.
                 </p>
-                <img src="/assets/pictures/plusCourtChemin/astronaut.gif" alt="Ho il bouge">
+                <div>
+                    <img class="flecheCarrousel" src="/assets/pictures/plusCourtChemin/fleche.png" alt="Il doit aller là">
+                </div>
+                <div class="rogerTerre row">
+                    <div class="col-6">
+                        <img class="imageRogerCarrousel" src="/assets/pictures/plusCourtChemin/astronaut.gif" alt="Ho il bouge">
+                        <p>Roger</p>
+                    </div>
+                    <div class="col-6">
+                        <img class="imageTerreCarrousel" src="/assets/pictures/plusCourtChemin/terre.png" alt="Ho il bouge">
+                        <p>Terre</p>
+                    </div>
+                </div>
             </div>
             <div class="carousel-item">
-
                 <img class="imgAstronauteFusee" src="/assets/pictures/plusCourtChemin/astronauteFusee.png" alt="Ho il vole !">
                 <h2>C'est parti !</h2>
-                <form action=""  method="post">
+                <div class="formulaireCarrousel">
+                    <form action=""  method="post">
+                        <input class="inputFormulaire" type="text" name="nom" placeholder="Entrez votre nom">
+                        <br>
 
-                    <input type="text" name="nom" placeholder="entrez votre nom :">
-                    <br>
+                        <input class="inputFormulaire" pattern="[0-9]+" type="text" name="age" placeholder="Entrez votre age">
+                        <br>
 
-                    <input type="text" name="age" placeholder="entrez votre age">
-                    <br>
-                    <input type="hidden" name="time">
-                    <div class="bloc">
-                        <div class="select">
+                        <input type="hidden" name="time">
+                        <div class="bloc">
+                            <div class="select">
                                 <select name="difficulte">
                                     <OPTION>Facile</OPTION>
                                     <OPTION>Moyen</OPTION>
                                     <OPTION>Difficile</OPTION>
                                 </select>
+                            </div>
                         </div>
-                    </div>
 
-
-
-                    <button class="boutonJouer">Jouer</button>
-                </form>
+                        <button class="boutonJouer">Jouer</button>
+                    </form>
+                </div>
             </div>
         </div>
+
         <img class="carousel-control-prev imgBouton boutonGauche" data-bs-target="#myCarousel" data-bs-slide="prev"
              src="/assets/pictures/plusCourtChemin/boutonGauche.png" alt="Bouton gauche !">
         <img class="carousel-control-next imgBouton boutonDroite" data-bs-target="#myCarousel" data-bs-slide="next"

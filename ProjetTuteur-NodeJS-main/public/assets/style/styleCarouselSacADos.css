@@ -23,54 +23,35 @@ body, html {
 /*Tout le carrousel*/
 .styleCarousel {
     width: 50%;
-    height: 600px;
+    height: 400px;
     background-color: #ffffff;
     border: solid 4px #371a45;
     border-radius: 45px;
-    margin: 12.5% 25%;
-}
-
-@media(min-width:992px) {
-    .styleCarousel {
-        width: 50%;
-        height: 400px;
-        background-color: #ffffff;
-        border: solid 4px #371a45;
-        border-radius: 45px;
-        margin: 120px 25%;
-    }
-}
-
-/* Ordinateur l */
-@media(min-width:1200px) {
-    .styleCarousel {
-        width: 50%;
-        height: 500px;
-        background-color: #ffffff;
-        border: solid 4px #371a45;
-        border-radius: 45px;
-        margin: 150px 25%;
-    }
+    margin: 120px 25%;
 }
 
 .carousel-item {
-
     padding: 30px 100px;
 }
 
-
 /*Page 1*/
+.titrePCC {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+    color: #371a45;
+    text-transform: uppercase;
+    font-family: 'American Captain';
+}
+
 .imgAstronauteLecture {
     width: 63px;
     height: 82px;
 }
 
-/*Page 2*/
-.imgMaps {
-    width: 100%;
-}
-
-/*Page 3*/
+/*Page 4*/
 .imgAstronauteFusee {
     width: 138px;
     height: 165px;
@@ -96,18 +77,10 @@ body, html {
 .paragraphes {
     color: #371a45;
     text-align: left;
+    font-size: 14px;
 }
 
-.titrePCC {
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    font-size: 35px;
-    margin: 0;
-    color: #371a45;
-    text-transform: uppercase;
-    font-family: 'American Captain';
-}
+
 
 
 

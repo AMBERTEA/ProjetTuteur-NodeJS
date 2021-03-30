@@ -5,6 +5,7 @@
 
 body, html {
     font-family: "Helvetica";
+    color: #371a45;
     padding: 0;
     margin: 0;
     overflow-x: hidden !important;
@@ -23,59 +24,80 @@ body, html {
 
 /*Tout le carrousel*/
 .styleCarousel {
-    width: 50%;
-    height: 600px;
+    width: 700px;
+    height: 450px;
     background-color: #ffffff;
     border: solid 4px #371a45;
     border-radius: 45px;
-    margin: 12.5% 25%;
-}
-
-@media(min-width:992px) {
-    .styleCarousel {
-        width: 50%;
-        height: 400px;
-        background-color: #ffffff;
-        border: solid 4px #371a45;
-        border-radius: 45px;
-        margin: 120px 25%;
-    }
-}
-
-/* Ordinateur l */
-@media(min-width:1200px) {
-    .styleCarousel {
-        width: 50%;
-        height: 500px;
-        background-color: #ffffff;
-        border: solid 4px #371a45;
-        border-radius: 45px;
-        margin: 150px 25%;
-    }
+    margin: 100px auto;
 }
 
 .carousel-item {
-
     padding: 30px 100px;
 }
 
-
 /*Page 1*/
-.imgAstronauteLecture {
-    width: 63px;
-    height: 82px;
-}
-
-/*Page 2*/
-.imgMaps {
+.titrePCC {
+    height: 100%;
     width: 100%;
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'American Captain';
 }
 
-/*Page 3*/
+.imgAstronauteLecture {
+    width: 79px;
+    height: 103px;
+    margin: 20px 210px;
+}
+
+/* Page 3 */
+.rogerTerre {
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: "American Captain", serif;
+}
+
+.imageRogerCarrousel {
+    width: 105px;
+    height: 109px;
+    margin: 20px;
+}
+
+.imageTerreCarrousel {
+    width: 105px;
+    height: 116px;
+    margin: 20px;
+}
+
+.flecheCarrousel {
+    position: absolute;
+    margin: 40px 190px;
+    width: 90px;
+    height: 90px;
+}
+
+/* Page 4*/
 .imgAstronauteFusee {
-    width: 138px;
-    height: 165px;
-    margin: auto;
+    margin-left: 198px;
+    margin-bottom: 20px;
+    width: 104px;
+    height: 124px;
+}
+
+.formulaireCarrousel {
+    text-align: center;
+}
+
+.bloc {
+    margin: 5px 5px 5px 146px;
+}
+
+.inputFormulaire, .boutonJouer{
+    margin: 5px
 }
 
 /*Boutons*/
@@ -93,24 +115,29 @@ body, html {
     margin: auto 25px auto 0;
 }
 
+.boutonJouer {
+    width: 300px;
+    height: 54px;
+    font-family: "American Captain", serif;
+    font-size: 20px;
+    color: white;
+    background-color: #f65c7a;
+    margin: 10px;
+    padding: 10px 80px 10px 80px;
+    border-radius: 20px;
+    border: solid 5px #371a45;
+}
+
 /*Paragraphes et titres*/
 .paragraphes {
-    color: #371a45;
     text-align: left;
+    font-size: 15px;
 }
 
-.titrePCC {
-    height: 100%;
-    width: 100%;
+h2 {
+    font-size: 30px;
     text-align: center;
-    font-size: 35px;
-    margin: 0;
-    color: #371a45;
-    text-transform: uppercase;
-    font-family: 'American Captain';
 }
-
-
 
 /*Réinitilaisation de la liste déroulante*/
 select {
