@@ -1,22 +1,22 @@
-.box{
-    left: 50%;
-    height: 200px;
-    width: 200px;
-    color: #ff0000;
-    border: 1px #000000 solid;
-    top: 50%;
+/*.box{*/
+/*    left: 50%;*/
+/*    height: 200px;*/
+/*    width: 200px;*/
+/*    color: #ff0000;*/
+/*    border: 1px #000000 solid;*/
+/*    top: 50%;*/
 
-}
+/*}*/
 
-.boxSol{
-    left: 50%;
-    height: 200px;
-    width: 200px;
-    color: #ff0000;
-    border: 1px #000000 solid;
-    top: 50%;
-    display: none;
-}
+/*.boxSol{*/
+/*    left: 50%;*/
+/*    height: 200px;*/
+/*    width: 200px;*/
+/*    color: #ff0000;*/
+/*    border: 1px #000000 solid;*/
+/*    top: 50%;*/
+/*    display: none;*/
+/*}*/
 
 body,html{
     padding: 0;
@@ -34,4 +34,35 @@ body,html{
     left: 0;
     width: 100%;
     z-index: -100;
+}
+
+.customMenu{
+    margin-top: 80px;
+}
+
+
+.hide{
+    display: none;
+}
+
+.pateCarbo{
+    width: 100px;
+    height: 100px;
+}
+
+.pateBolo{
+    width: 100px;
+    height: 100px;
+}
+.frite{
+    width: 100px;
+    height: 100px;
+}
+.sousoupe{
+    width: 100px;
+    height: 100px;
+}
+.steak{
+    width: 100px;
+    height: 100px;
 }

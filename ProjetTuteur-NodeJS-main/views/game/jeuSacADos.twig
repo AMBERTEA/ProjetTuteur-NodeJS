@@ -17,11 +17,11 @@
 
     <div class="container">
         <div class="container-fluid">
-            <div class="row">
-                <div class="menuRestaurant col-6">
+            <div class="row customMenu">
+                <div id="menuResto" class="menuRestaurant col-6">
                     <div class="row">
                         <div class="col-4">
-                            <img style="width: 100%" src="assets/pictures/sacADos/pateCarbo.png" alt="Ho des pates">
+                            <img style="width: 80%" src="assets/pictures/sacADos/pateCarbo.png" alt="Ho des pates">
                         </div>
                         <div class="col-3">
 
@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-1"></div>
                 <div class="recuRestaurant col-5">
-                    <p>lfhbv</p>
+                    <button   id="buttonValidate">Valider</button>
                 </div>
             </div>
         </div>
@@ -51,9 +51,11 @@
         <input type="hidden" id="name" name="nom" value="{{ nom }}">
         <input type="hidden" id="age" name="age" value="{{ age }}">
         <input type="hidden" id="difficulte" name="difficulte" value="{{ difficulte }}">
-        <button id="validerButtonSacADos" disabled > Valider</button>
+        <button id="buttonValidate" disabled > Valider</button>
     </form>
 </div>
+    <div class="hide">
+
 <div class="timer">
     <p >Score : </p>
     <p id="textMin"></p>
@@ -69,6 +71,7 @@
 <div id="sizeAndValue"></div>
 <div id="boxSolution" class="boxSol"></div>
 <div id="solution"></div>
+    </div>
 
 </body>
 <script src="/assets/js/time.js"></script>
@@ -77,4 +80,17 @@
 <script src="/assets/js/2/survieObject.class.js"></script>
 <script src="/assets/js/2/algoDeResolution.js"></script>
 <script src="/assets/js/2/JeuDuSacADos.js"></script>
+
+<script>
+    console.log(menu.getContainer())
+    let doc2 =  document.getElementById("menuResto")
+
+
+    for (let i in menu.getContainer()){
+        let btn = document.createElement("img")
+        btn.src = 'assets/pictures/sacADos/'+i+'.png'
+        btn.setAttribute("class",i);
+        doc2.appendChild(btn)
+    }
+</script>
 </html>

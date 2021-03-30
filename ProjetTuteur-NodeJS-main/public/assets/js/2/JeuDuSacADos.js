@@ -6,15 +6,15 @@ let date = new Date();
 let sacADosSol;
 let sacADosPlayer;
 
-let spagheti;
-let pene;
+let pateCarbo;
+let pateBolo;
 let frite;
-let soupe;
+let sousoupe;
 let steak;
-let saladeDeTomates;
-let saladeDeCrevette;
-let coteDePorc;
-let coteDeMouton;
+let saladeMixte;
+let saladeCrevette;
+let porc;
+let mouton;
 
 let menu = new Container();
 
@@ -26,19 +26,20 @@ if (doc === "Facile") {
     sacADosSol = new Sac(maxWeight);
     sacADosPlayer = new Sac(maxWeight);
 
-    spagheti = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"spagheti");
-    pene = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"pene");
+    pateCarbo = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"pateCarbo");
+    pateBolo = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"pateBolo");
     frite = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"frite");
-    soupe = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"soupe");
+    sousoupe = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"sousoupe");
     steak = new survieObject(Math.floor(Math.random()*3)+1,Math.floor(Math.random()*3)+1,"steak");
 
     menu = new Container();
 
-    menu.add(spagheti,Math.floor(Math.random()*3)+1);
-    menu.add(pene,Math.floor(Math.random()*3)+1);
+    menu.add(pateCarbo,Math.floor(Math.random()*3)+1);
+    menu.add(pateBolo,Math.floor(Math.random()*3)+1);
     menu.add(frite,Math.floor(Math.random()*3)+1);
-    menu.add(soupe,Math.floor(Math.random()*3)+1);
+    menu.add(sousoupe,Math.floor(Math.random()*3)+1);
     menu.add(steak,Math.floor(Math.random()*3)+1);
+    menu.length = 5
 } else if (doc === "Moyen") {
 
 } else {
@@ -57,7 +58,7 @@ function createButton(menu){
 
         newButton.appendChild(newContent);
         newButton.setAttribute("id",name);
-        newButton.setAttribute("class","btn btn-primary");
+        newButton.setAttribute("class"," hide btn btn-primary");
 
         const currentDiv = document.getElementById(name);
 
@@ -88,7 +89,7 @@ function compare(sacADosPlayer,sacADosSol){
     if(sacADosSol.getSacWeight() >= sacADosPlayer.getSacWeight() && sacADosSol.getSacValue() <= sacADosPlayer.getSacValue()){
         //dans le cas ou nous avons gagné
         document.getElementById("isWin").value = parseInt(document.getElementById("textMin").innerText);
-        document.getElementById("validerButtonSacADos").disabled = false;
+        document.getElementById("buttonValidate").disabled = false;
         window.alert("Bravo");
     }else{
         window.alert("Tu pouvais faire mieux");
