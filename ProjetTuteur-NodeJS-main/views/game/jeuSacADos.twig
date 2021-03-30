@@ -45,33 +45,30 @@
         </div>
     </div>
 
-<div class="form">
-    <form action="/JeuSacADos" method="post">
-        <input type="hidden" id="isWin" name="time" value="">
-        <input type="hidden" id="name" name="nom" value="{{ nom }}">
-        <input type="hidden" id="age" name="age" value="{{ age }}">
-        <input type="hidden" id="difficulte" name="difficulte" value="{{ difficulte }}">
-        <button id="buttonValidate" disabled > Valider</button>
-    </form>
-</div>
-    <div class="hide">
+                                    <div class="form">
+                                        <form action="/JeuSacADos" method="post">
+                                            <input type="hidden" id="isWin" name="time" value="">
+                                            <input type="hidden" id="name" name="nom" value="{{ nom }}">
+                                            <input type="hidden" id="age" name="age" value="{{ age }}">
+                                            <input type="hidden" id="difficulte" name="difficulte" value="{{ difficulte }}">
+                                            <button id="buttonValidate" disabled > Valider</button>
+                                        </form>
+                                    </div>
+                                    <div class="hide">
 
-<div class="timer">
-    <p >Score : </p>
-    <p id="textMin"></p>
-</div>
+                                        <div class="timer">
+                                            <p >Score : </p>
+                                            <p id="textMin"></p>
+                                        </div>
 
+                                        <button id="Valider"  class="btn-primary btn">Correction</button>
+                                        <button id="Effacé" class="btn-primary btn">Effacé</button>
 
-
-
-<button id="Valider"  class="btn-primary btn">Correction</button>
-<button id="Effacé" class="btn-primary btn">Effacé</button>
-
-<div id="boxPiece" class="box"></div>
-<div id="sizeAndValue"></div>
-<div id="boxSolution" class="boxSol"></div>
-<div id="solution"></div>
-    </div>
+                                        <div id="boxPiece" class="box"></div>
+                                        <div id="sizeAndValue"></div>
+                                        <div id="boxSolution" class="boxSol"></div>
+                                        <div id="solution"></div>
+                                    </div>
 
 </body>
 <script src="/assets/js/time.js"></script>
