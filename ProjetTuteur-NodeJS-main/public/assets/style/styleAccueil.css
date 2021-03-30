@@ -16,7 +16,7 @@ p, h1, h2 {
 }
 
 h1, h2, a {
-    font-family: "Gill Sans", sans-serif;;
+    font-family: "Gill Sans", sans-serif;
 }
 
 /* NavBar */
@@ -167,7 +167,7 @@ h1, h2, a {
     }
 
     .rectangles {
-        height: 240px;
+        height: 220px;
         width: 326px;
         margin: auto;
         padding: 0 29px;
@@ -265,8 +265,24 @@ h1, h2, a {
     .boutonSacADos {
         width: 89px;
         height: 89px;
-        top: -45px;
+        top: -42px;
         position: relative;
+    }
+
+    .divBoutonClassement {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .boutonClassement {
+        text-decoration: none;
+        color: #000000;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .boutonClassement:hover {
+        color: #000000;
     }
 
     /* Footer Accueil */
