@@ -3,7 +3,31 @@
     src: url('../fonts/American.otf') format('truetype');
 }
 
-/*Réinitilaisation de la liste déroulante*/
+p, a {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family: "American Captain", serif;
+}
+
+/* Retour accueil */
+.divBoutonRetourAccueil {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.boutonRetourAccueil {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px;
+    border: solid 1px #000000;
+    border-radius: 5px;
+}
+
+.boutonRetourAccueil:hover {
+    color: #000000;
+}
+
+/* Réinitilaisation de la liste déroulante */
 select {
     appearance: none;
     outline: 0;
@@ -14,10 +38,8 @@ select {
     font-size: 1.2em;
 }
 
-
 /* Mise en forme de la div .select*/
 .select {
-
     position: relative;
     width: 200px;
     height: 45px;
@@ -25,7 +47,6 @@ select {
     border-radius: 5px;
     border: 1px solid #CED4DA;
 }
-
 
 /* Mise en forme de la balise select*/
 select {
@@ -44,7 +65,7 @@ select {
 .select::after {
     content: '\276F';
     position: absolute;
-    top: 20%;
+    top: 7%;
     right: 0;
     padding: 0 15px;
     background: white;
@@ -87,6 +108,7 @@ form{
     border: solid 5px #371a45;
     transition: all 0.5s ease;
 }
+
 .buttonAfficher2{
     width: 300px;
     height: 54px;
@@ -106,13 +128,15 @@ form{
     color: black;
 }
 
-
 th{
+    text-transform: uppercase;
     font-family: "American Captain", serif;
 }
+
 option{
     font-family: "American Captain", serif;
 }
+
 .buttonAfficher2:hover{
     background-color: #945d1a;
 }
@@ -120,8 +144,6 @@ option{
 .buttonAfficher1:hover{
     background-color: #8d263a;
 }
-
-
 
 form.select{
     text-align: center;
