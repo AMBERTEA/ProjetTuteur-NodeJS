@@ -567,11 +567,12 @@ async function validationFinale(playerPath, source, target,date) {
         console.log("toto")
         return
     }
-    var timepassed = calcTemp(getActualSec(date));
+    var timepassed = parseInt(document.getElementById("textMin").innerText);
     if (res === 1) {
         document.getElementById("isWin").value = "Perdu";
         document.getElementById("buttonValidate").disabled =true;
     } else {
+        document.getElementById("buttonValidate").hidden = false;
         document.getElementById("isWin").value = timepassed;
         document.getElementById("buttonValidate").disabled =false;
     }

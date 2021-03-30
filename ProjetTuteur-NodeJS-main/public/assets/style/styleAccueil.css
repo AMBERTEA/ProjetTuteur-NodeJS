@@ -4,7 +4,7 @@
 }
 
 body, html {
-    font-family: "Helvetica";
+    font-family: "Helvetica", serif;
     padding: 0;
     margin: 0;
     overflow-x: hidden !important;
@@ -38,291 +38,278 @@ h1, h2, a {
     z-index: -1;
 }
 
-/* Media Queries */
-/* Téléphone */
-@media(max-width:767px) {
+
+/* All */
+h1 {
+    font-size: 55px;
+    font-weight: 800;
+}
+
+/* Image enfant accueil */
+.accueilEnfant {
+    position: absolute;
+    top: -112px;
+    right: -267px;
+    border-radius: 50%;
+}
+
+.imgAccueilEnfant {
+    border-radius: 50%;
+    width: 909px;
+    height: 909px;
+}
+
+/* Présentation fête de la science accueil */
+.presentationFdsAccueilAll {
+    height: 647px;
+    width: 100%;
+}
+
+.presentationFdsAccueil {
+    padding: 125px 0 173px 0;
+    height: 647px;
+    width: 450px;
+}
+
+.titrePresentationFdsAccueil {
+    margin-bottom: 32px;
+    height: 182px;
+    width: 100%;
+}
+
+.paragraphePresentationFdsAcceuil {
+    height: 135px;
+    width: 100%;
+}
+
+/* Présentation IUT accueil */
+.presentationIutAcceuilAll {
+    height: 715px;
+    width: 100%;
+    padding: 155px 0 97px 0;
+}
+
+.presentationIutAcceuil {
+    height: 463px;
+    width: 1004px;
+    display: flex;
+    margin: auto;
+}
+
+.colGauchePresentationIuiAccueil {
+    height: 100%;
+    width: 409px;
+    margin-right: 85px;
+    display: flex;
+}
+
+.colDroitePresentationIuiAccueil {
+    height: 100%;
+    width: 510px;
+}
+
+.titrePresentationIutAccueil {
+    height: 130px;
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.paragraphePresentationIutAcceuil {
+    height: 301px;
+    width: 100%;
+}
+
+/* Objetif IUT accueil */
+.objectifIutAcceuilAll {
+    height: 656px;
+    width: 100%;
+    padding: 96px 0 95px 0;
+}
+
+.objectifIutAccueil {
+    height: 465px;
+    width: 100%;
+}
+
+.titreObjectifIutAccueil {
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+.paragrapheObjectifIutAcceuil {
+    height: 71px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.rectanglesObjectifIutAccueil {
+    display: flex;
+}
+
+.rectangles {
+    height: 290px;
+    width: 326px;
+    margin: auto;
+    padding: 0 29px;
+    text-align: center;
+    border: solid 1px #00000010;
+    border-radius: 26px;
+}
+
+.rectangles:hover {
+    box-shadow: 1px 3px #00000025, 2px 3px #00000025;
+    transition: 0.3s;
+}
+
+.imageRectangleAmuser {
+    margin-top: 53px;
+    width: 98px;
+    height: 65px;
+}
+
+.imageRectangleInterroger {
+    margin-top: 43px;
+    width: 60px;
+    height: 83px;
+}
+
+.imageRectangleRenseigner {
+    margin-top: 47px;
+    width: 86px;
+    height: 76px;
+}
+
+.titreRectangles {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 24px 0 8px 0;
+}
+
+.paragraphesRectangles{
+    font-size: 12px;
 
 }
 
-/* Tablette */
-@media(min-width:768px) {
-
+/* Jeux accueil */
+.menuJeuxAccueilAll {
+    height: 802px;
+    width: 100%;
+    padding: 95px 0 100px 0;
 }
 
-/* Ordinateur m */
-@media(min-width:992px) {
-
+.menuJeuxAccueil {
+    height: 607px;
+    width: 100%;
 }
 
-/* Ordinateur l */
-@media(min-width:1200px) {
-    /* All */
-    h1 {
-        font-size: 55px;
-        font-weight: 800;
-    }
+.titreJeuxAccueil {
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 34px;
+}
 
-    /* Image enfant accueil */
-    .accueilEnfant {
-        position: absolute;
-        top: -112px;
-        right: -267px;
-        border-radius: 50%;
-    }
+.paragrapheJeuxAcceuil {
+    height: 71px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 37px;
+}
 
-    .imgAccueilEnfant {
-        border-radius: 50%;
-        width: 909px;
-        height: 909px;
-    }
+.jeuxAccueil {
+    display: flex;
+}
 
-    /* Présentation fête de la science accueil */
-    .presentationFdsAccueilAll {
-        height: 647px;
-        width: 100%;
-    }
+.jeu {
+    height: 404px;
+    width: 494px;
+    margin: auto;
+    text-align: center;
+    display: block;
+}
 
-    .presentationFdsAccueil {
-        padding: 125px 0 173px 0;
-        height: 647px;
-        width: 450px;
-    }
+.imagePlusCourtChemin {
+    height: 360px;
+    width: 494px;
+}
 
-    .titrePresentationFdsAccueil {
-        margin-bottom: 32px;
-        height: 182px;
-        width: 100%;
-    }
+.boutonPlusCourtChemin {
+    width: 89px;
+    height: 89px;
+    top: -55px;
+    position: relative;
+}
 
-    .paragraphePresentationFdsAcceuil {
-        height: 135px;
-        width: 100%;
-    }
+.imageSacADos {
+    height: 350px;
+    width: 494px;
+    border-radius: 25px;
+    box-shadow: 1px 5px #dfdfdf60;
+}
 
-    /* Présentation IUT accueil */
-    .presentationIutAcceuilAll {
-        height: 715px;
-        width: 100%;
-        padding: 155px 0 97px 0;
-    }
+.boutonSacADos {
+    width: 89px;
+    height: 89px;
+    top: -42px;
+    position: relative;
+}
 
-    .presentationIutAcceuil {
-        height: 463px;
-        width: 1004px;
-        display: flex;
-        margin: auto;
-    }
+.divBoutonClassement {
+    margin-top: 20px;
+    text-align: center;
+}
 
-    .colGauchePresentationIuiAccueil {
-        height: 100%;
-        width: 409px;
-        margin-right: 85px;
-        display: flex;
-    }
+.boutonClassement {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+}
 
-    .colDroitePresentationIuiAccueil {
-        height: 100%;
-        width: 510px;
-    }
+.boutonClassement:hover {
+    color: #000000;
+}
 
-    .titrePresentationIutAccueil {
-        height: 130px;
-        width: 100%;
-        margin-bottom: 32px;
-    }
+/* Footer Accueil */
+.footerAccueilAll {
+    width: 100%;
+    height: 440px;
+    padding: 100px 0 0 0;
+}
 
-    .paragraphePresentationIutAcceuil {
-        height: 301px;
-        width: 100%;
-    }
+.footerAccueil {
+    border-top: solid 1px #00000020;
+    width: 100%;
+    height: 100%;
+    padding: 50px 0 0 0;
+}
 
-    /* Objetif IUT accueil */
-    .objectifIutAcceuilAll {
-        height: 656px;
-        width: 100%;
-        padding: 96px 0 95px 0;
-    }
+.paragrapheFooterAccueil {
+    width: 100%;
+    height: 70px;
+    font-size: 10px;
+}
 
-    .objectifIutAccueil {
-        height: 465px;
-        width: 100%;
-    }
+.imagesFooterAccueil {
+    display: flex;
+    padding-top: 30px;
+}
 
-    .titreObjectifIutAccueil {
-        height: 60px;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 34px;
-    }
+.imagesFooterAccueil a {
+    margin: auto;
+}
 
-    .paragrapheObjectifIutAcceuil {
-        height: 71px;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 60px;
-    }
+.imgFdsFooterAccueil {
+    width: 204px;
+    height: 72px;
+    align-content: end;
+}
 
-    .rectanglesObjectifIutAccueil {
-        display: flex;
-    }
-
-    .rectangles {
-        height: 220px;
-        width: 326px;
-        margin: auto;
-        padding: 0 29px;
-        text-align: center;
-        border: solid 1px #00000010;
-        border-radius: 26px;
-    }
-
-    .rectangles:hover {
-        box-shadow: 1px 3px #00000025, 2px 3px #00000025;
-        transition: 0.3s;
-    }
-
-    .imageRectangleAmuser {
-        margin-top: 53px;
-        width: 98px;
-        height: 65px;
-    }
-
-    .imageRectangleInterroger {
-        margin-top: 43px;
-        width: 60px;
-        height: 83px;
-    }
-
-    .imageRectangleRenseigner {
-        margin-top: 47px;
-        width: 86px;
-        height: 76px;
-    }
-
-    .titreRectangles {
-        font-size: 24px;
-        font-weight: 500;
-        margin: 24px 0 8px 0;
-    }
-
-    /* Jeux accueil */
-    .menuJeuxAccueilAll {
-        height: 802px;
-        width: 100%;
-        padding: 95px 0 100px 0;
-    }
-
-    .menuJeuxAccueil {
-        height: 607px;
-        width: 100%;
-    }
-
-    .titreJeuxAccueil {
-        height: 60px;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 34px;
-    }
-
-    .paragrapheJeuxAcceuil {
-        height: 71px;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 37px;
-    }
-
-    .jeuxAccueil {
-        display: flex;
-    }
-
-    .jeu {
-        height: 404px;
-        width: 494px;
-        margin: auto;
-        text-align: center;
-        display: block;
-    }
-
-    .imagePlusCourtChemin {
-        height: 360px;
-        width: 494px;
-    }
-
-    .boutonPlusCourtChemin {
-        width: 89px;
-        height: 89px;
-        top: -55px;
-        position: relative;
-    }
-
-    .imageSacADos {
-        height: 350px;
-        width: 494px;
-        border-radius: 25px;
-        box-shadow: 1px 5px #dfdfdf60;
-    }
-
-    .boutonSacADos {
-        width: 89px;
-        height: 89px;
-        top: -42px;
-        position: relative;
-    }
-
-    .divBoutonClassement {
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    .boutonClassement {
-        text-decoration: none;
-        color: #000000;
-        font-size: 20px;
-        font-weight: 600;
-    }
-
-    .boutonClassement:hover {
-        color: #000000;
-    }
-
-    /* Footer Accueil */
-    .footerAccueilAll {
-        width: 100%;
-        height: 440px;
-        padding: 100px 0 0 0;
-    }
-
-    .footerAccueil {
-        border-top: solid 1px #00000020;
-        width: 100%;
-        height: 100%;
-        padding: 50px 0 0 0;
-    }
-
-    .paragrapheFooterAccueil {
-        width: 100%;
-        height: 70px;
-        font-size: 10px;
-    }
-
-    .imagesFooterAccueil {
-        display: flex;
-        padding-top: 30px;
-    }
-
-    .imagesFooterAccueil a {
-        margin: auto;
-    }
-
-    .imgFdsFooterAccueil {
-        width: 204px;
-        height: 72px;
-        align-content: end;
-    }
-
-    .imgIutFooterAccueil {
-        width: 296px;
-        height: 118px;
-        align-content: start;
-    }
+.imgIutFooterAccueil {
+    width: 296px;
+    height: 118px;
+    align-content: start;
 }
