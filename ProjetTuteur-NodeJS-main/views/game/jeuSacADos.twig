@@ -97,7 +97,8 @@
 
         //difinition de la div row
         let divRow = document.createElement("div")
-        divRow.setAttribute("class","row "+ i+"Ligne")
+        divRow.setAttribute("class","row ")
+        divRow.setAttribute("id", i+"Ligne")
 
 
         //postiotionnement de la quantité
@@ -133,11 +134,65 @@
 
 
         //ajout d'un event listener
-        divRow.addEventListener("click", () => {
-            let ressource = document.getElementById(i+"ImageToPush").src
-            console.log(ressource)
-            document.getElementById("boxPiece").innerHTML += '<img  src="assets/pictures/sacADos/' + i + '.png" alt="image"/>'
-        })
+
+        function invertRecu(i,act,init,value){
+            console.log("act : "+act)
+            act = menu.getContainer()[i].nbr
+            document.getElementById(i+"Ligne").addEventListener("click",functn)
+            document.getElementById(i+"Ligne").style.backgroundColor = ""
+            document.getElementById(i+"Ligne").style.opacity = ""
+
+            if(init - act === 0 ){
+                document.getElementById(i+"Recu").innerText = ""
+            }else{
+                document.getElementById(i+"Recu").innerText = i+" x"+ ((init - act)+1)
+                    +" ..... "+ (( (init - act)+1)*value )  + "€"
+            }
+        }
+
+
+        let functn = () =>{
+
+            let init = menu.getContainer()[i].initalNbr
+            let act = menu.getContainer()[i].nbr
+            let value = menu.getContainer()[i].object.getValue()
+
+            if( document.getElementById(i+"Recu") == null){
+                menu.remove(i)
+                let text = document.createElement("p")
+                text.setAttribute("id",i+"Recu")
+                text.innerText =  i + " x1 ..... "+ value   + "€"
+                document.getElementById("boxPiece").appendChild(text)
+
+
+                if(menu.getContainer()[i].nbr<=0){
+                    document.getElementById(i+"Ligne").removeEventListener("click",functn)
+                    document.getElementById(i+"Ligne").style.backgroundColor = "#404040"
+                    document.getElementById(i+"Ligne").style.opacity = "20%"
+                }
+
+            }else{
+                menu.remove(i)
+                console.log("calc  "+ (init - act)  )
+                document.getElementById(i+"Recu").innerText = i+" x"+ ((init - act)+1)
+                    +" ..... "+ (( (init - act)+1 )*value )  + "€"
+
+
+                document.getElementById(i+"Recu").addEventListener("click",() =>{
+                    invertRecu(i,act,init,value)
+                })
+
+                if(menu.getContainer()[i].nbr<=0){
+                    document.getElementById(i+"Ligne").removeEventListener("click",functn)
+                    document.getElementById(i+"Ligne").style.backgroundColor = "#404040"
+                    document.getElementById(i+"Ligne").style.opacity = "20%"
+                }
+            }
+
+        }
+        divRow.addEventListener("click",functn)
+
+
 
     }
 </script>

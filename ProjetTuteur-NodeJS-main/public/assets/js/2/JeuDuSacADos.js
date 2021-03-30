@@ -76,7 +76,7 @@ function createButton(menu){
         // document.getElementById(name).innerHTML = name+": "+item.nbr+"\nPoids: "+obj.getWeight()+"\nValeur: "+obj.getValue();
         document.getElementById(name).innerHTML = "Ajouter";
         document.getElementById(name).addEventListener('click', function(){
-            if (sacADosPlayer.addInSacPlayer(obj) == 0)
+            if (sacADosPlayer.addInSacPlayer(obj) === 0)
                 menu.remove(name);
             // document.getElementById(name).innerHTML = name+": "+item.nbr+"\nPoids: "+obj.getWeight()+"\nValeur: "+obj.getValue();
             document.getElementById(name).innerHTML = "Ajouter";
