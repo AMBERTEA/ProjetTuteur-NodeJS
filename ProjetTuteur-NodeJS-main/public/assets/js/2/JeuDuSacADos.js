@@ -1,5 +1,8 @@
 let maxWeight;
 
+
+let date = new Date();
+
 let sacADosSol;
 let sacADosPlayer;
 
@@ -81,6 +84,9 @@ resolution(menu,sacADosSol);
 
 function compare(sacADosPlayer,sacADosSol){
     if(sacADosSol.getSacWeight() >= sacADosPlayer.getSacWeight() && sacADosSol.getSacValue() <= sacADosPlayer.getSacValue()){
+        //dans le cas ou nous avons gagné
+        document.getElementById("isWin").value = parseInt(document.getElementById("textMin").innerText);
+        document.getElementById("validerButtonSacADos").disabled = false;
         window.alert("Bravo");
     }else{
         window.alert("Tu pouvais faire mieux");

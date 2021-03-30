@@ -543,9 +543,6 @@ drawGraph.setCanvasSize(window.screen.width /1.5,window.screen.height /1.5);   /
 drawGraph.loadCanvasBackground("/assets/pictures/plusCourtChemin/fondPCC.jpg");
 drawGraph.loadGraph(graph, c);
 
-function random(){
-    return Math.floor(Math.random()*(15 - 2 + 1))+2;
-}
 
 function getActualSec(date){
     var hour = date.getHours();
