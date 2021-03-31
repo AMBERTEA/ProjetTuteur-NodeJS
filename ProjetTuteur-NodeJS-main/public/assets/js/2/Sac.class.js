@@ -35,7 +35,7 @@ class Sac{
     addInSac(survieObject){
         if (this.getSacWeight()<this.sacSize){
             this.sac.push(survieObject);
-           document.getElementById("boxSolution").innerHTML += '<button style="border-radius: 50%;">'+survieObject.getName()+'</button>';
+           document.getElementById("boxSolution").innerHTML += '<button id="boutonSol" >'+survieObject.getName()+'</button>';
         }else{
             window.alert("L'objet choisie est trop lourd");
         }

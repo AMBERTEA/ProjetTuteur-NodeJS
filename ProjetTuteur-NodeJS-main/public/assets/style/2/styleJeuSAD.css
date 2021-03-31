@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'American Captain';
+    src: url('../../fonts/American.otf') format('truetype');
+}
+
 /*.box{*/
 /*    left: 50%;*/
 /*    height: 200px;*/
@@ -21,7 +26,28 @@
 body,html{
     padding: 0;
     margin: 0;
+    text-transform: uppercase;
+    font-family: "American Captain", serif;
     overflow: hidden !important;
+}
+
+.boutonModif {
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    color: white;
+    background-color: #ffc176;
+    padding: 10px;
+    border-radius: 20px;
+    border: solid 4px #c36b3d;
+}
+
+#boutonSol {
+    font-family: "Helvetica", serif;
+    font-size: 10px;
+    border-radius: 20px;
+    border: black 1px solid;
+    margin-left: 5px;
 }
 
 .menuRestaurant, .recuRestaurant {
@@ -45,57 +71,59 @@ body,html{
 }
 
 .customMenu{
-    margin-top: 80px;
+    margin-top: 10px;
 }
 
 .hide{
     display: none;
 }
 
-
-.pateCarbo {
-    width: 128px;
-    height: 75px;
+p {
+    margin-top: 15px;
 }
 
 
+.pateCarbo {
+    width: 85px;
+    height: 50px;
+}
 
 .pateBolo {
-    width: 161px;
-    height: 75px;
+    width: 107px;
+    height: 50px;
 }
 
 .frite {
-    width: 136px;
-    height: 75px;
+    width: 91px;
+    height: 50px;
 }
 
 .sousoupe {
-    width: 118px;
-    height: 75px;
+    width: 79px;
+    height: 50px;
 }
 
 .steak {
-    width: 152px;
-    height: 75px;
+    width: 101px;
+    height: 50px;
 }
 
 .saladeMixte {
-    width: 140px;
-    height: 75px;
+    width: 93px;
+    height: 50px;
 }
 
 .saladeCrevette {
-    width: 141px;
-    height: 75px;
+    width: 94px;
+    height: 50px;
 }
 
 .porc {
-    width: 166px;
-    height: 75px;
+    width: 111px;
+    height: 50px;
 }
 
 .mouton {
-    width: 121px;
-    height: 75px;
+    width: 81px;
+    height: 50px;
 }

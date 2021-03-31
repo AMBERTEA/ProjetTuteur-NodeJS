@@ -28,19 +28,19 @@
                         <input type="hidden" id="name" name="nom" value="{{ nom }}">
                         <input type="hidden" id="age" name="age" value="{{ age }}">
                         <input type="hidden" id="difficulte" name="difficulte" value="{{ difficulte }}">
-                        <button id="buttonValidate" style="display: none" > register</button>
+                        <button class="boutonModif" id="buttonValidate" style="display: none" > register</button>
                     </form>
                     <div class="timer">
                         <p >Score : </p>
                         <p id="textMin"></p>
                     </div>
-                    <button id="Valider">Valider</button>
-                    <button id="Efface">Effacer</button>
-                    <div id="boxSolution" hidden class="boxSol"></div>
-                    <div id="boxPiece" class="box"></div>
-
+                    <button class="boutonModif" id="Valider">Valider</button>
+                    <button class="boutonModif" id="Efface">Effacer</button>
                     <p id="total"></p>
                     <p id="poids"></p>
+
+                    <div id="boxSolution" hidden class="boxSol"></div>
+                    <div id="boxPiece" class="box"></div>
 
                 </div>
             </div>
@@ -151,11 +151,11 @@
 
             if (document.getElementById(i + "Recu") == null) {
                 let ligneRecu = document.createElement("p")
-                ligneRecu.innerText = i + " x1 ..... " + value + "€"
+                ligneRecu.innerText = i + " x1 ............... " + value + "€"
                 ligneRecu.setAttribute("id", i + "Recu")
                 document.getElementById("boxPiece").appendChild(ligneRecu)
             } else {
-                document.getElementById(i + "Recu").innerText = i + " x" + ((init - act) + 1) + " ..... " + (((init - act) + 1) * value) + "€"
+                document.getElementById(i + "Recu").innerText = i + " x" + ((init - act) + 1) + " ............... " + (((init - act) + 1) * value) + "€"
             }
 
 
@@ -178,8 +178,8 @@
     });
 
     function total(){
-        document.getElementById("poids").innerText ="Poids : "+ sacADosPlayer.getSacWeight() +  "€ sur "+maxWeight +"€"
-        document.getElementById("total").innerText = sacADosPlayer.getSacValue() + "kCal"
+        document.getElementById("poids").innerText = "Budget : "+ sacADosPlayer.getSacWeight() +  "€ sur "+maxWeight +"€"
+        document.getElementById("total").innerText = "Valeur nutritive : "+ sacADosPlayer.getSacValue() + "kCal"
     }
 
 
