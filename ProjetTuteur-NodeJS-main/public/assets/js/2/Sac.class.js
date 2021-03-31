@@ -35,7 +35,7 @@ class Sac{
     addInSac(survieObject){
         if (this.getSacWeight()<this.sacSize){
             this.sac.push(survieObject);
-            document.getElementById("boxSolution").innerHTML += '<button style="border-radius: 50%;">'+survieObject.getName()+'</button>';
+           document.getElementById("boxSolution").innerHTML += '<button style="border-radius: 50%;">'+survieObject.getName()+'</button>';
         }else{
             window.alert("L'objet choisie est trop lourd");
         }
@@ -44,7 +44,7 @@ class Sac{
     addInSacPlayer(survieObject){
         if (this.getSacWeight()+survieObject.getWeight() <= this.sacSize){
             this.sac.push(survieObject);
-            document.getElementById("boxPiece").innerHTML += '<button style="border-radius: 50%;">'+survieObject.getName()+'</button>';
+            //document.getElementById("boxPiece").innerHTML += '<button style="border-radius: 50%;">'+survieObject.getName()+'</button>';
             console.log(this.sac);
             return 0;
         }else{

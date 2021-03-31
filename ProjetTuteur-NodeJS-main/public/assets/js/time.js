@@ -5,6 +5,8 @@ function chrono() {
     if(document.getElementById("buttonValidate").hidden === false){
         return
     }
+
+    console.log(1)
     document.getElementById("textMin").innerText = d
     d += 1
     setTimeout(chrono,300)

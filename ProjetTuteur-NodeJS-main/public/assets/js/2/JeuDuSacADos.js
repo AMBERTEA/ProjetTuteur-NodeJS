@@ -88,7 +88,7 @@ function createButton(menu){
     }
 }
 
-document.getElementById("sizeAndValue").innerHTML = "Poids: "+sacADosPlayer.getSacWeight()+"/"+sacADosPlayer.getSacSize()+" Valeur: "+sacADosPlayer.getSacValue();
+
 
 createButton(menu);
 
@@ -98,11 +98,11 @@ function compare(sacADosPlayer,sacADosSol){
     if(sacADosSol.getSacWeight() >= sacADosPlayer.getSacWeight() && sacADosSol.getSacValue() <= sacADosPlayer.getSacValue()){
         //dans le cas ou nous avons gagné
         document.getElementById("isWin").value = parseInt(document.getElementById("textMin").innerText);
-        document.getElementById("buttonValidate").disabled = false;
+        document.getElementById("buttonValidate").style.display = "inline"
         window.alert("Bravo");
     }else{
         window.alert("Tu pouvais faire mieux");
-        document.getElementById("boxSolution").style.display = "block";
+        document.getElementById("boxSolution").hidden = false
         document.getElementById("solution").innerHTML = "Poids: "+sacADosSol.getSacWeight()+"/"+sacADosSol.getSacSize()+" Valeur: "+sacADosSol.getSacValue();
     }
 }
@@ -111,18 +111,6 @@ document.getElementById("Valider").addEventListener('click',function(){
     compare(sacADosPlayer,sacADosSol);
     console.log(sacADosPlayer.getSacWeight());
     console.log(sacADosPlayer.getSacValue());
-});
-
-document.getElementById("Effacé").addEventListener('click',function(){
-    sacADosPlayer.clearSac();
-    document.getElementById("boxPiece").innerHTML = '';
-    for(let key in menu.getContainer()){
-        menu.getContainer()[key].nbr = menu.getContainer()[key].initalNbr;
-        console.log(menu[key])
-        document.getElementById(menu.getContainer()[key].object.getName()).innerHTML = menu.getContainer()[key].object.getName()+": "+menu.getContainer()[key].nbr+"\nPoids: "+menu.getContainer()[key].object.getWeight()+"\nValeur: "+menu.getContainer()[key].object.getValue();
-        document.getElementById(menu.getContainer()[key].object.getName()).disabled = false;
-        document.getElementById("sizeAndValue").innerHTML = "Poids: "+sacADosPlayer.getSacWeight()+"/"+sacADosPlayer.getSacSize()+" Valeur: "+sacADosPlayer.getSacValue();
-    }
 });
 
 
