@@ -22,7 +22,12 @@
 
                 </div>
                 <div class="col-1"></div>
-                <div class="recuRestaurant col-5">
+                <div id="leRecu" class="recuRestaurant col-5">
+
+                    <div class="timer">
+                        <p >Score : </p>
+                        <p id="textMin"></p>
+                    </div>
                     <form action="/JeuSacADos" method="post">
                         <input type="hidden" id="isWin" name="time" value="">
                         <input type="hidden" id="name" name="nom" value="{{ nom }}">
@@ -30,11 +35,8 @@
                         <input type="hidden" id="difficulte" name="difficulte" value="{{ difficulte }}">
                         <button class="boutonModif" id="buttonValidate" style="display: none" > register</button>
                     </form>
-                    <div class="timer">
-                        <p >Score : </p>
-                        <p id="textMin"></p>
-                    </div>
                     <button class="boutonModif" id="Valider">Valider</button>
+                    <button class="boutonModif" id="Rejouer" onclick="window.location.reload()">Rejouer</button>
                     <button class="boutonModif" id="Efface">Effacer</button>
                     <p id="total"></p>
                     <p id="poids"></p>
@@ -49,29 +51,34 @@
 
 
 </body>
-<script src="/assets/js/time.js"></script>
+<script SRC="/assets/js/ext/swal.js"></script>
 <script src="/assets/js/2/Container.class.js"></script>
 <script src="/assets/js/2/Sac.class.js"></script>
 <script src="/assets/js/2/survieObject.class.js"></script>
 <script src="/assets/js/2/algoDeResolution.js"></script>
 <script src="/assets/js/2/JeuDuSacADos.js"></script>
+<script src="/assets/js/2/time2.js"></script>
 
 <script>
+    function baseValues(){
+        document.getElementById("poids").innerText = "Budget : 0€ sur "+maxWeight+"€"
+        document.getElementById("total").innerText = "Valeur nutritive : 0 kCal"
+
+    }
+    baseValues()
 
 
 
-
-    console.log(menu.getContainer())
+function createMenu(menu,event){
+    //menu est le menu
+    //event est un booléen qui ajoute ou non l'event
     let doc2 = document.getElementById("menuResto")
-
-
 
     for (let i in menu.getContainer()){
 
-        console.log(menu.getContainer()[i].nbr)
-
         //a mettre dans la divQuantite
         let qnt = document.createElement("p")
+        qnt.setAttribute('id',i+"Quantite")
         qnt.innerText = "Quantite: " +menu.getContainer()[i].nbr
 
         //a mettre a l'interieur dans la divImage
@@ -79,6 +86,8 @@
         img.src = 'assets/pictures/sacADos/'+i+'.png'
         img.setAttribute("class",i)
         img.setAttribute("id",i+"ImageToPush")
+        img.title = i
+
 
         //a mettre a l'interieur de divValeur
         let valeur = document.createElement("p")
@@ -104,6 +113,7 @@
         let divImage = document.createElement("div")
         divImage.setAttribute("class","col-3")
 
+
         divImage.appendChild(img)
 
         //positionnement de la valeur
@@ -128,13 +138,22 @@
 
 
         //ajout d'un event listener
-        divRow.addEventListener("click",() =>{
-            test(i)
-        })
+        if(event){
+            divRow.addEventListener("click",() =>{
+                test(i)
+            })
+        }
+
 
 
 
     }
+}
+
+createMenu(menu,true)
+
+
+
 
 
 
@@ -147,7 +166,11 @@
             let init = menu.getContainer()[i].initalNbr
             let act = menu.getContainer()[i].nbr
             let value = menu.getContainer()[i].object.getValue()
+
             menu.remove(i)
+
+
+
 
             if (document.getElementById(i + "Recu") == null) {
                 let ligneRecu = document.createElement("p")
@@ -163,6 +186,7 @@
                 document.getElementById(i + "Ligne").style.display = "none"
             }
 
+            document.getElementById(i+"Quantite").innerText ="Quantite: "+ (act-1)
         }
     }
 
@@ -172,7 +196,9 @@
         document.getElementById("boxPiece").innerHTML = '';
         for(let i in menu.getContainer()){
             menu.getContainer()[i].nbr = menu.getContainer()[i].initalNbr;
+            baseValues()
             console.log(menu.getContainer()[i])
+            document.getElementById(i+"Quantite").innerText ="Quantite: "+ (menu.getContainer()[i].initalNbr)
             document.getElementById(i+"Ligne").style.display = ""
         }
     });
@@ -185,4 +211,5 @@
 
 
 </script>
+
 </html>

@@ -35,9 +35,10 @@ class Sac{
     addInSac(survieObject){
         if (this.getSacWeight()<this.sacSize){
             this.sac.push(survieObject);
+
            document.getElementById("boxSolution").innerHTML += '<button id="boutonSol" >'+survieObject.getName()+'</button>';
         }else{
-            window.alert("L'objet choisie est trop lourd");
+            swal("attention","L'objet choisie est trop lourd","warning")
         }
     }
 
@@ -48,7 +49,7 @@ class Sac{
             console.log(this.sac);
             return 0;
         }else{
-            window.alert("L'objet choisie est trop lourd");
+            swal("Attention","L'objet choisie est trop lourd","warning")
             return -1;
         }
     }

@@ -99,9 +99,9 @@ function compare(sacADosPlayer,sacADosSol){
         //dans le cas ou nous avons gagné
         document.getElementById("isWin").value = parseInt(document.getElementById("textMin").innerText);
         document.getElementById("buttonValidate").style.display = "inline"
-        window.alert("Bravo");
+        swal("FÉlicitation","Tu as trouvÉ la bonne solution !","success")
     }else{
-        window.alert("Tu pouvais faire mieux");
+        swal("dOmmAge","tU poUvais Faire mieUx...","error")
         document.getElementById("boxSolution").hidden = false
         document.getElementById("solution").innerHTML = "Poids: "+sacADosSol.getSacWeight()+"/"+sacADosSol.getSacSize()+" Valeur: "+sacADosSol.getSacValue();
     }

@@ -681,10 +681,10 @@ function compareToDijkstra(pathPlayer, pathDijkstra) {
     console.log(pathPlayer);
     var change;
     if (isPlayerPathGood) {
-        window.alert("Tu as gagné!");
+        swal("bravo","tu as gagnÉ","success")
         return 0;
     } else {
-        window.alert("Tu as perdu");
+        swal("dOmmAge","tU as perdu","error")
         drawSolution(pathDijkstra);
         return 1;
         // Ce que tu devrais faire : drawSolution(pathDijkstra)
@@ -703,6 +703,7 @@ function valider(pathPlayer, source, target){
             pathPlayer.push(target);
             return compareToDijkstra(pathPlayer, pathDijkstra, source, target);
         }
-    } else window.alert("Tu n'as pas donné de solution,\n" +
-        "si tu veux la solution ferme moi et click sur le boutton solution");
+    } else{
+        swal("attention","tu n'as pas donnÉ de solution","warning")
+    }
 }
